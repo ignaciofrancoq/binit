@@ -1,0 +1,16 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+//Manejo de idiomas
+import { getContent, getStaticPaths } from '../../lib/lang';
+export { getStaticPaths }; 
+
+const { lang } = Astro.params;
+const content = await getContent(lang, 'home');
+---
+
+<BaseLayout lang={lang}>
+
+  <h1>{content.title}</h1>
+  <p>{content.description}</p>
+</BaseLayout>

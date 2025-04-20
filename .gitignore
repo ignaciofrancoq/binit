@@ -1,0 +1,19 @@
+# Node
+node_modules/
+dist/
+.astro/
+
+# Sistema / IDE
+.DS_Store
+Thumbs.db
+*.log
+.env
+.env.*
+.vscode/
+.idea/
+
+# TypeScript
+*.tsbuildinfo
+
+# Astro
+astro.config.mjs  # (si lo generás dinámicamente, aunque en general lo podés versionar)
