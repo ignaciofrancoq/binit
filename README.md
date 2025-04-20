@@ -2,9 +2,7 @@
 # BINIT - Página Institucional
 
 Este es el proyecto de la página institucional de **BINIT**. 
-Desarrollado por **Maria Pia Zaniboni**, desarrolladora web Full Stack. 
-Puedes ver más detalles sobre mi trabajo y conectarte conmigo a través de mi perfil de LinkedIn.
-[**LinkedIn: Maria Pia Zaniboni**](https://www.linkedin.com/in/maria-pia-zaniboni/)
+Desarrollado por [**Maria Pia Zaniboni**](https://www.linkedin.com/in/maria-pia-zaniboni/)
 
 ## Requisitos previos
 
@@ -49,7 +47,7 @@ Para iniciar el servidor de desarrollo y ver el proyecto en acción, usa el sigu
 npm run dev
 ```
 
-Esto iniciará el servidor de desarrollo y podrás acceder a tu sitio en [http://localhost:3000](http://localhost:3000).
+Esto iniciará el servidor de desarrollo y podrás acceder a tu sitio en [http://localhost:4321/es](http://localhost:4321/es).
 
 ## Construcción (Build)
 
