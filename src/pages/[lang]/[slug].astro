@@ -1,0 +1,31 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Seo from '../../components/Seo.astro';
+
+
+import { getContent } from '../../lib/lang';
+import type { Lang } from '../../lib/lang';
+export { getStaticPaths } from '../../lib/static-paths';
+
+// Buscamos la clave interna
+const { lang, slug } = Astro.params;
+const content = await getContent(lang as Lang, slug);
+
+console.log("Lang: " , lang);
+console.log("Slug " , slug);
+---
+
+<BaseLayout lang={lang}>
+  <Fragment slot="head">
+    <Seo
+      title={content.title + ' | Binit'}
+      description={content.description}
+      keywords={content.description}
+      url={`https://binit.tech/${lang}/${slug}`}
+    />
+  </Fragment>
+
+  hola
+  <h1>{content.title}</h1>
+  <p>{content.description}</p>
+</BaseLayout>

@@ -1,0 +1,11 @@
+@use '../base/variables';
+
+header {
+  background-color: variables.$color-secondary;
+  color: white;
+  padding: variables.$spacing-md;
+
+  nav {
+    gap: variables.$spacing-md;
+  }
+}

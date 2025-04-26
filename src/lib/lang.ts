@@ -1,19 +1,26 @@
-type Lang = 'es' | 'en';
+import { routes } from './routes';
+export type Lang = 'es' | 'en';
 
-export async function getContent(lang: Lang, page: string) {
-  try {
-    const module = await import(`../content/${lang}/${page}.json`);
-    return module.default;
-  } catch (e) {
-    console.error(`No se pudo cargar el contenido de ${lang}/${page}.json`, e);
-    return {};
+const content: Record<string, Record<Lang, { title: string; description: string }>> = {
+  'about-us': {
+    en: { title: 'About Us', description: 'This is the About Us page in English.' },
+    es: { title: 'Nosotros', description: 'Esta es la página de Nosotros en Español.' },
+  },
+  career: {
+    en: { title: 'Career', description: 'Career opportunities at Binit.' },
+    es: { title: 'Carrera', description: 'Oportunidades laborales en Binit.' },
+  },
+  // agregá más
+};
+
+export async function getContent(lang: Lang, slug: string) {
+
+  const internalSlug = Object.keys(routes).find((key) => routes[key][lang] === slug);
+
+  // Si no encuentra la clave interna => página no encontrada
+  if (!internalSlug) {
+    throw new Error(`Slug not found for: ${lang}/${slug}`);
   }
-}
 
-//genera las rutas posibles para 'lang'
-export function getStaticPaths() {
-  return [
-    { params: { lang: 'es' } },
-    { params: { lang: 'en' } },
-  ];
+  return content[internalSlug]?.[lang] ?? { title: 'Not Found', description: '' };
 }

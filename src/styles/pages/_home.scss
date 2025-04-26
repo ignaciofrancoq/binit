@@ -1,0 +1,17 @@
+@use '../base/variables';
+
+.home-hero {
+  padding: variables.$spacing-lg;
+  text-align: center;
+
+  h1 {
+    font-family: variables.$font-family;
+    font-size: 2.5rem;
+    color: variables.$color-primary;
+  }
+
+  p {
+    font-size: 1.125rem;
+    color: variables.$color-text;
+  }
+}

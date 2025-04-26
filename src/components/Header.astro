@@ -1,0 +1,30 @@
+---
+import { getPathForLang, findRouteKeyByPath, type Lang } from '../lib/routes';
+import { menuLabels } from '../lib/menu';
+
+const { lang, currentPath }: { lang: Lang; currentPath: string } = Astro.props;
+
+const menuItems = Object.entries(menuLabels[lang]);
+const otherLang: Lang = lang === 'en' ? 'es' : 'en';
+
+const currentRouteKey = findRouteKeyByPath(currentPath, lang);
+const otherLangUrl = currentRouteKey ? getPathForLang(currentRouteKey, otherLang) : `/${otherLang}/`;
+---
+
+<nav class="menu">
+  <ul>
+    {menuItems.map(([routeKey, label]) => {
+      const href = getPathForLang(routeKey, lang);
+      const isActive = currentPath === href || currentPath === href?.split('#')[0];
+      return (
+        <li class={isActive ? 'active' : ''}>
+          <a href={href}>{label}</a>
+        </li>
+      );
+    })}
+  </ul>
+
+  <div class="language-switcher">
+    <a href={otherLangUrl}>{otherLang.toUpperCase()}</a>
+  </div>
+</nav>

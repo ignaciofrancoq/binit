@@ -1,0 +1,14 @@
+@use '../base/variables';
+/* Reset CSS básico */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: variables.$font-family;
+}
