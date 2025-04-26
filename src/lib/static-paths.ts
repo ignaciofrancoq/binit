@@ -3,10 +3,11 @@ import { routes } from './routes';
 export function getStaticPaths() {
   const paths = [];
 
-  for (const slug in routes) {
-    const langs = routes[slug];
+  for (const routeKey in routes) {
+    if (routeKey === 'home') continue; // Salteamos home
+    const langs = routes[routeKey];
     for (const lang in langs) {
-      paths.push({ params: { lang, slug: langs[lang] } }); // Ojo que slug es el *slug traducido* que irá en URL
+      paths.push({ params: { lang, slug: langs[lang] } });
     }
   }
 

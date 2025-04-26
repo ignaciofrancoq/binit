@@ -1,0 +1,34 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Seo from '../../components/Seo.astro';
+
+import { getContent } from '../../lib/lang';// si tenés content para home
+import type { Lang } from '../../lib/routes';
+
+export async function getStaticPaths() {
+  return [
+    { params: { lang: 'en' } },
+    { params: { lang: 'es' } },
+  ];
+}
+
+const { lang } = Astro.params;
+
+// si querés podés traer contenido dinámico para home también
+const content = await getContent(lang as Lang, 'home');
+---
+
+<BaseLayout lang={lang}>
+  <Fragment slot="head">
+    <Seo
+      title={content.title ?? 'Home | Binit'}
+      description={content.description ?? 'Default description'}
+      keywords="Binit, Innovation, Technology"
+      url="https://binit.tech/"
+      image="/home.jpg"
+    />
+  </Fragment>
+
+  <h1>{content.title ?? 'Home'}</h1>
+  <p>{content.description ?? 'Welcome to our website.'}</p>
+</BaseLayout>

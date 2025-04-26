@@ -1,6 +1,10 @@
 export type Lang = 'es' | 'en';
 
 export const routes = {
+  home: {
+    en: '', // ⚡ Vacío porque `/en/`
+    es: '', // ⚡ Vacío porque `/es/`
+  },
   binit_ai_strategy: {
     es: 'binit-ai-estrategia',
     en: 'binit-ai-strategy',
