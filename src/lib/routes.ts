@@ -1,4 +1,4 @@
-export type Lang = 'es' | 'en';
+import type { Lang } from './i18n';
 
 export const routes = {
   home: {
@@ -7,10 +7,10 @@ export const routes = {
   },
   binit_ai_strategy: {
     es: 'binit-ai-estrategia',
-    en: 'binit-ai-strategy',
+    en: 'binit-ai-strategy',    
   },
   services: {
-    es: '#servicios', //??
+    es: '#servicios', //probar??
     en: '#services', //??
   },
   case_studies: {
@@ -33,4 +33,15 @@ export const routes = {
 
 export function getRouteKeyFromSlug(slug: string, lang: Lang): string | undefined {
   return Object.entries(routes).find(([, langs]) => langs[lang] === slug)?.[0];
+}
+
+// Esta función te da la URL (el slug) correspondiente a un routeKey y un idioma
+export function getPathForLang(routeKey: string, lang: Lang): string | undefined {
+  return routes[routeKey]?.[lang] ? `/${lang}/${routes[routeKey][lang]}` : undefined;
+}
+
+// Esta función busca la *clave interna* (routeKey) a partir de un slug y un idioma
+export function findRouteKeyByPath(path: string, lang: Lang): string | undefined {
+  const slug = path.replace(`/${lang}/`, '').replace(/\/$/, ''); // limpio el path
+  return Object.keys(routes).find((key) => routes[key][lang] === slug);
 }

@@ -4,15 +4,13 @@ import Seo from '../../components/Seo.astro';
 
 
 import { getContent } from '../../lib/lang';
-import type { Lang } from '../../lib/lang';
+import type { Lang } from '../../lib/i18n';
 export { getStaticPaths } from '../../lib/static-paths';
 
 // Buscamos la clave interna
 const { lang, slug } = Astro.params;
 const content = await getContent(lang as Lang, slug);
 
-console.log("Lang: " , lang);
-console.log("Slug " , slug);
 ---
 
 <BaseLayout lang={lang}>
@@ -25,7 +23,6 @@ console.log("Slug " , slug);
     />
   </Fragment>
 
-  hola
   <h1>{content.title}</h1>
   <p>{content.description}</p>
 </BaseLayout>

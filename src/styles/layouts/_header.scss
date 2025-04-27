@@ -1,11 +1,63 @@
 @use '../base/variables';
 
 header {
-  background-color: variables.$color-secondary;
+  //TO DO, cuando scroleas que sea un color solido el fondo
+  background: linear-gradient(
+    to bottom,
+    rgba(variables.$color-primary, 0.9), // color oscuro 80% arriba
+    rgba(variables.$color-primary, 0)    // totalmente transparente abajo
+  );
+  padding: 1rem variables.$padding-page;
   color: white;
-  padding: variables.$spacing-md;
-
   nav {
+    display: flex;
     gap: variables.$spacing-md;
+    align-items: center;
+    ul.main-menu{
+      display: flex;
+      li{
+        padding: 0 1.5rem;   
+        list-style: none;
+        &.active{
+          a{
+            font-weight: bold;
+          }
+        }
+
+        a{
+          color: white;
+          text-decoration: none;
+          letter-spacing: 1px;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+        }
+      }
+    }
+
+    ul.language-switcher {
+      list-style: none;
+      position: relative;
+      display: inline-block;
+    
+      .dropdown {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        list-style: none;
+        border: 1px solid #ccc;
+      }
+    
+      &:hover .dropdown {
+        display: block;
+      }
+    
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+    }    
   }
 }

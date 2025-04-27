@@ -1,21 +1,34 @@
 ---
-import { getPathForLang, findRouteKeyByPath, type Lang } from '../lib/routes';
+import { languages, type Lang } from '../lib/i18n';
+import { getPathForLang, findRouteKeyByPath } from '../lib/routes';
 import { menuLabels } from '../lib/menu';
 
-const { lang, currentPath }: { lang: Lang; currentPath: string } = Astro.props;
+const { lang, currentPath } = Astro.props as { lang: Lang; currentPath: string };
 
 const menuItems = Object.entries(menuLabels[lang]);
-const otherLang: Lang = lang === 'en' ? 'es' : 'en';
-
 const currentRouteKey = findRouteKeyByPath(currentPath, lang);
-const otherLangUrl = currentRouteKey ? getPathForLang(currentRouteKey, otherLang) : `/${otherLang}/`;
----
 
+// Genera todos los otros idiomas que no son el actual
+const otherLangs = Object.entries(languages)
+  .filter(([code]) => code !== lang)
+  .map(([code]) => ({
+    code: code as Lang,
+    url: currentRouteKey ? getPathForLang(currentRouteKey, code as Lang) : `/${code}/`,
+  }));
+---
+<header>
 <nav class="menu">
-  <ul>
-    {menuItems.map(([routeKey, label]) => {
+  <a href={getPathForLang('home', lang)} class="logo">
+    <img src="/img/logo.png" alt="Logo" />
+  </a>
+
+  <ul class="main-menu">
+    {menuItems.map(([routeKey, label], index) => {
+      if (index === 0) return null; // Saltar el primer ítem (home/logo)
+
       const href = getPathForLang(routeKey, lang);
       const isActive = currentPath === href || currentPath === href?.split('#')[0];
+
       return (
         <li class={isActive ? 'active' : ''}>
           <a href={href}>{label}</a>
@@ -24,7 +37,17 @@ const otherLangUrl = currentRouteKey ? getPathForLang(currentRouteKey, otherLang
     })}
   </ul>
 
-  <div class="language-switcher">
-    <a href={otherLangUrl}>{otherLang.toUpperCase()}</a>
-  </div>
+  <ul class="language-switcher">
+    <li class="selected">
+      <img src={languages[lang].icon} alt={languages[lang].label} width="24" height="16" />
+      <ul class="dropdown">
+        {otherLangs.map(({ code, url }) => (
+          <a href={url}>
+            <img src={languages[code].icon} alt={languages[code].label} width="24" height="16" />
+          </a>
+          ))}
+      </ul>
+    </li>
+  </ul>
 </nav>
+</header>
