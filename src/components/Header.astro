@@ -1,6 +1,6 @@
 ---
 import { languages, type Lang } from '../lib/i18n';
-import { getPathForLang, findRouteKeyByPath } from '../lib/routes';
+import { getUrl, findRouteKeyByPath } from '../lib/routes';
 import { menuLabels } from '../lib/menu';
 
 const { lang, currentPath } = Astro.props as { lang: Lang; currentPath: string };
@@ -13,12 +13,12 @@ const otherLangs = Object.entries(languages)
   .filter(([code]) => code !== lang)
   .map(([code]) => ({
     code: code as Lang,
-    url: currentRouteKey ? getPathForLang(currentRouteKey, code as Lang) : `/${code}/`,
+    url: currentRouteKey ? getUrl(currentRouteKey, code as Lang) : `/${code}/`,
   }));
 ---
 <header>
 <nav class="menu">
-  <a href={getPathForLang('home', lang)} class="logo">
+  <a href={getUrl('home', lang)} class="logo">
     <img src="/img/logo.svg" alt="Logo" width="135" height="40" />
   </a>
 
@@ -27,7 +27,7 @@ const otherLangs = Object.entries(languages)
       {menuItems.map(([routeKey, label], index) => {
         if (index === 0) return null; // Saltar el primer ítem (home/logo)
 
-        const href = getPathForLang(routeKey, lang);
+        const href = getUrl(routeKey, lang);
         const isActive = currentPath === href || currentPath === href?.split('#')[0];
 
         return (
