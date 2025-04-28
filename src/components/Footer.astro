@@ -1,0 +1,41 @@
+---
+import { languages, type Lang } from '../lib/i18n';
+
+const { lang } = Astro.props as { lang: Lang;  };
+---
+
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-logo">
+            <a href="/">
+                <img src="/img/footer/binit-logo.png" alt="Binit" />
+            </a>
+        </div>
+  
+        <div class="footer-partners">
+            <h3>Partners de</h3>
+            <ul class="footer__nav-list">
+                <li><img src="/img/footer/microsoft-logo.png" alt="Microsoft Partner" /></li>
+                <li><img src="/img/footer/ibm-logo.png" alt="IBM" /></li>
+                <li><img src="/img/footer/sap-logo.png" alt="SAP" /></li>
+                <li><img src="/img/footer/argentina-texas-logo.png" alt="Argentina Texas" /></li>
+            </ul>
+        </div>
+  
+        <div class="footer-info">
+            <p>sales@binit.tech</p>
+            <p>info@binit.tech</p>
+            <a href="https://www.linkedin.com/company/binit-tech/" target="_blank" title="Binit Tech Linkedin">
+                LinkedIn
+            </a>
+        </div>
+    </div>
+  
+    <div class="footer-bottom">
+        <p>Binit es una empresa del grupo <a href="https://subgen.ai/" target="_blank" title="SubgenAI" class="decoration">SubgenAI</a></p>
+        <p>© 2025 BINIT. Reservados todos los derechos | 
+            <a href="#" target="_blank" title="Política de Privacidad">Política de Privacidad</a> | 
+            <a href="#" target="_blank" title="Política de Cookies">Política de Cookies</a> | 
+            <a href="#" target="_blank" title="Aviso Legal">Aviso Legal</a></p>
+    </div>
+  </footer>  

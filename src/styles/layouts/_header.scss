@@ -1,63 +1,94 @@
 @use '../base/variables';
+@use '../base/mixins' as mixins;
 
 header {
   //TO DO, cuando scroleas que sea un color solido el fondo
+  position: fixed;
+  width: 100%;
   background: linear-gradient(
     to bottom,
     rgba(variables.$color-primary, 0.9), // color oscuro 80% arriba
     rgba(variables.$color-primary, 0)    // totalmente transparente abajo
   );
-  padding: 1rem variables.$padding-page;
+  padding: 1.5rem variables.$padding-page;
   color: white;
+
+  @include mixins.respond-to(2xl) {
+    padding: 1.5rem variables.$padding-page-2xl;
+  }
+
   nav {
     display: flex;
     gap: variables.$spacing-md;
     align-items: center;
-    ul.main-menu{
+    justify-content: space-between;
+    .content-menu{
       display: flex;
-      li{
-        padding: 0 1.5rem;   
-        list-style: none;
-        &.active{
+      align-items: center;
+      ul.main-menu{
+        display: flex;
+        li{
+          padding: 0 1.5rem;   
+          list-style: none;
+          &.active{
+            a{
+              font-weight: bold;
+            }
+          }
+
           a{
-            font-weight: bold;
+            color: white;
+            text-decoration: none;
+            letter-spacing: 1px;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
           }
         }
-
-        a{
-          color: white;
-          text-decoration: none;
-          letter-spacing: 1px;
-          font-size: 14px;
-          font-style: normal;
-          font-weight: 400;
-          line-height: normal;
-        }
       }
-    }
-
-    ul.language-switcher {
-      list-style: none;
-      position: relative;
-      display: inline-block;
-    
-      .dropdown {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
+      ul.language-switcher {
+        cursor: pointer;
+        margin-top: 8px;
+        margin-left: 1rem;
         list-style: none;
-        border: 1px solid #ccc;
-      }
-    
-      &:hover .dropdown {
-        display: block;
-      }
-    
-      a {
-        text-decoration: none;
-        color: inherit;
-      }
-    }    
+        position: relative;
+        display: inline-block;
+
+        .language-arrow::before {
+          content: '';
+          display: inline-block;
+          width: 12px;
+          height: 14px;
+          background-image: url('/img/icons/arrow-down.svg');
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center;
+          margin-left: 5px;
+        }
+      
+        .dropdown {
+          display: none;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          list-style: none;
+          left: -0.5rem;
+          background-color: variables.$color-primary;
+          padding: 0 0.5rem 0.5rem;
+        }
+      
+        &:hover .dropdown {
+          display: block;
+        }
+      
+        a {
+          text-decoration: none;
+          color: inherit;
+          margin-top: 7px;
+          display: block;
+        }
+      }     
+    }
   }
 }

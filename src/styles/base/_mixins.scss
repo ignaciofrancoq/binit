@@ -5,14 +5,31 @@
   align-items: center;
 }
 
-@mixin respond-to($breakpoint) {
-  @if $breakpoint == sm {
-    @media (max-width: 640px) { @content; }
+$breakpoints: (
+  sm: 640px,
+  md: 768px,
+  lg: 1024px,
+  xl: 1280px,
+  2xl: 1536px
+);
+
+// Mixin flexible para media queries
+@mixin respond-to($breakpoint, $type: max) {
+  $size: map-get($breakpoints, $breakpoint);
+
+  @if $size {
+    @if $type == max {
+      @media (max-width: $size) {
+        @content;
+      }
+    }
+    @else if $type == min {
+      @media (min-width: $size) {
+        @content;
+      }
+    }
   }
-  @else if $breakpoint == md {
-    @media (max-width: 768px) { @content; }
-  }
-  @else if $breakpoint == lg {
-    @media (max-width: 1024px) { @content; }
+  @else {
+    @warn "⚠️ Breakpoint `#{$breakpoint}` no está definido en \$breakpoints.";
   }
 }

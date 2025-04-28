@@ -1,4 +1,4 @@
-export type Lang = 'en' | 'es'; // Aca se agregan los idiomas
+export type Lang = 'en' | 'es' /*| 'pt'*/; // Aca se agregan los idiomas
 
 export const languages: { [key in Lang]: { label: string; icon: string } } = {
   en: {
@@ -9,4 +9,8 @@ export const languages: { [key in Lang]: { label: string; icon: string } } = {
     label: 'ES',
     icon: '/img/flags/es.svg',
   },
+  /*pt: {
+    label: 'PT',
+    icon: '/img/flags/br.svg',
+  },*/
 };

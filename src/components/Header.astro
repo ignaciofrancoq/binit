@@ -22,32 +22,35 @@ const otherLangs = Object.entries(languages)
     <img src="/img/logo.png" alt="Logo" />
   </a>
 
-  <ul class="main-menu">
-    {menuItems.map(([routeKey, label], index) => {
-      if (index === 0) return null; // Saltar el primer ítem (home/logo)
+  <div class="content-menu">
+    <ul class="main-menu">
+      {menuItems.map(([routeKey, label], index) => {
+        if (index === 0) return null; // Saltar el primer ítem (home/logo)
 
-      const href = getPathForLang(routeKey, lang);
-      const isActive = currentPath === href || currentPath === href?.split('#')[0];
+        const href = getPathForLang(routeKey, lang);
+        const isActive = currentPath === href || currentPath === href?.split('#')[0];
 
-      return (
-        <li class={isActive ? 'active' : ''}>
-          <a href={href}>{label}</a>
-        </li>
-      );
-    })}
-  </ul>
+        return (
+          <li class={isActive ? 'active' : ''}>
+            <a href={href}>{label}</a>
+          </li>
+        );
+      })}
+    </ul>
 
-  <ul class="language-switcher">
-    <li class="selected">
-      <img src={languages[lang].icon} alt={languages[lang].label} width="24" height="16" />
-      <ul class="dropdown">
-        {otherLangs.map(({ code, url }) => (
-          <a href={url}>
-            <img src={languages[code].icon} alt={languages[code].label} width="24" height="16" />
-          </a>
-          ))}
-      </ul>
-    </li>
-  </ul>
+    <ul class="language-switcher">
+      <li class="selected">
+        <img src={languages[lang].icon} alt={languages[lang].label} width="24" height="16" />
+        <span class="language-arrow"></span>
+        <ul class="dropdown">
+          {otherLangs.map(({ code, url }) => (
+            <a href={url}>
+              <img src={languages[code].icon} alt={languages[code].label} width="24" height="16" />
+            </a>
+            ))}
+        </ul>
+      </li>
+    </ul>
+  </div>
 </nav>
 </header>

@@ -1,0 +1,72 @@
+@use '../base/variables';
+@use '../base/mixins' as mixins;
+
+footer{
+    background-color: #000;
+    padding: 6rem variables.$padding-page 2rem;
+    color: white;
+    font-family: variables.$font-family;
+    font-weight: 400;
+
+    @include mixins.respond-to(2xl) {
+        padding: 6rem variables.$padding-page-2xl 2rem;
+    }
+
+    .footer-container{
+        display: flex;
+        justify-content: space-between;
+        align-content: flex-end;
+
+        .footer-logo{
+
+        }
+
+        .footer-partners{
+            h3{
+                font-size: 16px;
+                font-weight: 400;
+                margin-bottom: 2rem;
+            }
+            ul{
+                display: flex;
+                list-style: none;
+                li{
+                    padding-right: 2rem;
+                }
+            }
+        }
+        .footer-info{
+            margin-top: 1.5rem;
+            p{
+                font-size: 16px;
+                line-height: 30px;
+                color: white;
+                margin-bottom: 10px;
+            }
+            a{
+                cursor: pointer;
+                text-decoration: none;
+                color: white;
+            }
+        }
+    }
+    .footer-bottom{
+        text-align: center;
+        margin-top: 4rem;
+        p{
+            font-size: 16px;
+            line-height: 30px;
+            color: white;
+            margin-bottom: 10px;
+        }
+        a{
+            cursor: pointer;
+            text-decoration: none;
+            color: white;
+            &.decoration{
+                text-decoration: underline;
+            }
+        }
+    }
+
+}
