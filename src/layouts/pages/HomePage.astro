@@ -1,1 +1,35 @@
-<h3>About US</h3>
+---
+const { lang, content } = Astro.props;
+---
+
+<section class="banner" style="background-image: url('/img/home/img-01.png');">
+  <div class="banner__content">
+    <h1>BINIT AI Strategy</h1>
+    <h2>Desarrollamos soluciones de negocio potenciadas con IA Generativa.</h2>
+    <p>Utilizamos nuestra tecnología avanzada, brindamos acompañamiento experto y tenemos un historial de experiencia demostrable.</p>
+    <a href="/contacto" class="banner__button">Quiero potenciar mi negocio</a>
+  </div>
+</section>
+<section class="section-what-we-do">
+  <div class="content-text">
+    <h3>¿Qué hacemos?<h3>
+    <p>En <strong>Binit</strong> nos especializamos en el diseño, consultoría y desarrollo de software, creación de plataformas tecnológicas, transformación digital e inteligencia artificial generativa aplicada.</p>
+    <p>Nuestro <strong>objetivo</strong> es impulsar la transformación digital de tus productos, servicios y negocio. Nuestros expertos en IA generativa están listos para potenciar tus proyectos a través de un proceso ágil y centrado en tus necesidades.</p>
+  </div>
+
+  <div class="carousel">
+    <div>
+      <img src="" />
+      <h3>Impulsamos negocios con soluciones de IA</h3>
+      <p>Potenciamos negocios con soluciones de IA personalizadas, logrando posicionar a las empresas como líderes en sus industrias.</p>
+    </div>
+    <div></div>
+  </div>
+</section>
+
+
+<section>
+<h1>{content.title}</h1>
+<p>{content.description}</p>
+
+</section>

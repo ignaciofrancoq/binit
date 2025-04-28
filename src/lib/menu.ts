@@ -19,4 +19,13 @@ export const menuLabels: Record<Lang, Record<string, string>> = {
     career: 'Carrera',
     contact: 'Contacto',
   },
+  pt: {
+    home: 'Início',
+    binit_ai_strategy: 'Estratégia Binit AI',
+    services: 'Serviços',
+    case_studies: 'Estudos de caso',
+    'about-us': 'Sobre nós',
+    career: 'Carreira',
+    contact: 'Contato',
+},
 };

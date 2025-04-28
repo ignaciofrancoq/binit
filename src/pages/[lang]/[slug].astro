@@ -4,6 +4,7 @@ import Seo from '../../components/Seo.astro';
 
 
 import { getContent } from '../../lib/lang';
+import { loadPage } from '../../lib/pageLoader';
 import type { Lang } from '../../lib/i18n';
 export { getStaticPaths } from '../../lib/static-paths';
 
@@ -11,6 +12,7 @@ export { getStaticPaths } from '../../lib/static-paths';
 const { lang, slug } = Astro.params;
 const content = await getContent(lang as Lang, slug);
 
+const Page = await loadPage(slug, lang);
 ---
 
 <BaseLayout lang={lang}>
@@ -23,6 +25,5 @@ const content = await getContent(lang as Lang, slug);
     />
   </Fragment>
 
-  <h1>{content.title}</h1>
-  <p>{content.description}</p>
+  <Page lang={lang} content={content} />
 </BaseLayout>

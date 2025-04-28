@@ -2,10 +2,10 @@
 @use '../base/mixins' as mixins;
 
 main{
-    padding: 94px variables.$padding-page 1rem;
+    padding: 0 variables.$padding-page 1rem;
     color: white;
     min-height: 100vh;
     @include mixins.respond-to(2xl) {
-        padding: 94px variables.$padding-page-2xl 1rem;
+        padding: 0 variables.$padding-page-2xl 1rem;
     }
 }

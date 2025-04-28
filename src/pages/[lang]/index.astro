@@ -4,11 +4,14 @@ import Seo from '../../components/Seo.astro';
 
 import { getContent } from '../../lib/lang';// si tenés content para home
 import type { Lang } from '../../lib/i18n';
+import { loadPage } from '../../lib/pageLoader';
 
+//To do: deberia levantar los idiomas de i18n.ts
 export async function getStaticPaths() {
   return [
     { params: { lang: 'en' } },
     { params: { lang: 'es' } },
+    { params: { lang: 'pt' } },
   ];
 }
 
@@ -16,6 +19,8 @@ const { lang } = Astro.params;
 
 // si querés podés traer contenido dinámico para home también
 const content = await getContent(lang as Lang, 'home');
+
+const Page = await loadPage('home', lang);
 ---
 
 <BaseLayout lang={lang}>
@@ -29,6 +34,6 @@ const content = await getContent(lang as Lang, 'home');
     />
   </Fragment>
 
-  <h1>{content.title ?? 'Home'}</h1>
-  <p>{content.description ?? 'Welcome to our website.'}</p>
+  <Page lang={lang} content={content} />
+
 </BaseLayout>

@@ -6,22 +6,27 @@ const content: Record<string, Record<Lang, { title: string; description: string 
   'home': {
     en: { title: 'Welcome to Binit', description: 'Technology to achieve your business vision.' },
     es: { title: 'Bienvenidos a Binit', description: 'Tecnología para lograr tu visión de negocio.' },
+    pt: { title: 'Bem-vindo à Binit', description: 'Tecnologia para alcançar a sua visão de negócio.' },
   },
   binit_ai_strategy: {
     en: { title: 'Binit ai strategy', description: 'Career opportunities at Binit.' },
     es: { title: 'Binit ai strategy', description: 'Oportunidades laborales en Binit.' },
+    pt: { title: 'Estratégia de IA da Binit', description: 'Oportunidades de carreira na Binit.' },
   },
   case_studies: {
     en: { title: 'case studies', description: 'Career opportunities at Binit.' },
     es: { title: 'caso estudio', description: 'Oportunidades laborales en Binit.' },
+    pt: { title: 'estudos de caso', description: 'Oportunidades de carreira na Binit.' },
   },
   'about-us': {
     en: { title: 'About Us', description: 'This is the About Us page in English.' },
     es: { title: 'Nosotros', description: 'Esta es la página de Nosotros en Español.' },
+    pt: { title: 'Sobre nós', description: 'Esta é a página Sobre nós em Português.' },
   },
   career: {
     en: { title: 'Career', description: 'Career opportunities at Binit.' },
     es: { title: 'Carrera', description: 'Oportunidades laborales en Binit.' },
+    pt: { title: 'Carreira', description: 'Oportunidades de carreira na Binit.' },
   },
 };
 

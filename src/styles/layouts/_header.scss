@@ -4,6 +4,7 @@
 header {
   //TO DO, cuando scroleas que sea un color solido el fondo
   position: fixed;
+  z-index: 9;
   width: 100%;
   background: linear-gradient(
     to bottom,
