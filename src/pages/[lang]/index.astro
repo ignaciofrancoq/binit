@@ -26,11 +26,11 @@ const Page = await loadPage('home', lang);
 <BaseLayout lang={lang}>
   <Fragment slot="head">
     <Seo
-      title={content.title ?? 'Home | Binit'}
-      description={content.description ?? 'Default description'}
-      keywords="Binit, Innovation, Technology"
+      title={content.seo.title }
+      description={content.seo.description}
+      keywords={content.seo.keywords}
       url="https://binit.tech/"
-      image="/home.jpg"
+      image={content.seo.image}  
     />
   </Fragment>
 

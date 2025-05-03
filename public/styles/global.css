@@ -97,6 +97,7 @@ header nav .content-menu ul.language-switcher a {
 }
 
 main {
+  overflow: hidden;
   padding: 0 20rem 1rem;
   color: white;
   min-height: 100vh;

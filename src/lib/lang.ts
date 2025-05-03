@@ -2,52 +2,41 @@ import type { Lang } from './i18n';
 import { routes } from './routes';
 const isDev = import.meta.env.DEV;
 
-const content: Record<string, Record<Lang, { title: string; description: string }>> = {
-  'home': {
-    en: { title: 'Welcome to Binit', description: 'Technology to achieve your business vision.' },
-    es: { title: 'Bienvenidos a Binit', description: 'Tecnología para lograr tu visión de negocio.' },
-    pt: { title: 'Bem-vindo à Binit', description: 'Tecnologia para alcançar a sua visão de negócio.' },
-  },
-  binit_ai_strategy: {
-    en: { title: 'Binit ai strategy', description: 'Career opportunities at Binit.' },
-    es: { title: 'Binit ai strategy', description: 'Oportunidades laborales en Binit.' },
-    pt: { title: 'Estratégia de IA da Binit', description: 'Oportunidades de carreira na Binit.' },
-  },
-  case_studies: {
-    en: { title: 'case studies', description: 'Career opportunities at Binit.' },
-    es: { title: 'caso estudio', description: 'Oportunidades laborales en Binit.' },
-    pt: { title: 'estudos de caso', description: 'Oportunidades de carreira na Binit.' },
-  },
-  'about-us': {
-    en: { title: 'About Us', description: 'This is the About Us page in English.' },
-    es: { title: 'Nosotros', description: 'Esta es la página de Nosotros en Español.' },
-    pt: { title: 'Sobre nós', description: 'Esta é a página Sobre nós em Português.' },
-  },
-  career: {
-    en: { title: 'Career', description: 'Career opportunities at Binit.' },
-    es: { title: 'Carrera', description: 'Oportunidades laborales en Binit.' },
-    pt: { title: 'Carreira', description: 'Oportunidades de carreira na Binit.' },
-  },
-};
+const contentFiles = import.meta.glob<Record<string, any>>(
+  '../content/*/*.json',
+  { eager: true }
+);
 
-export async function getContent(lang: Lang, slug: string) {
-  // Buscamos si el slug existe tal cual
-  if (content[slug]?.[lang]) {
-    return content[slug][lang];
+export async function getContent(
+  lang: Lang,
+  slug: string
+): Promise<Record<string, any>> {
+  // 1) Intento directo: ../content/{slug}/{lang}.json
+  let key = `../content/${slug}/${lang}.json`;
+  let mod = (contentFiles as Record<string, { default: any }>)[key];
+  if (mod) {
+    return mod.default;
   }
 
-  // Si no, tratamos de encontrar el internalSlug por ruta
-  const internalSlug = Object.keys(routes).find((key) => routes[key][lang] === slug);
+  // 2) Si no existe, busco el “internalSlug” comparando en routes
+  //    (encuentra la clave interna que para este lang produce ese slug)
+  const internalSlug = Object.keys(routes).find(
+    (routeKey) => routes[routeKey][lang] === slug
+  );
 
-  if (internalSlug && content[internalSlug]?.[lang]) {
-    return content[internalSlug][lang];
+  if (internalSlug) {
+    key = `../content/${internalSlug}/${lang}.json`;
+    mod = (contentFiles as Record<string, { default: any }>)[key];
+    if (mod) {
+      return mod.default;
+    }
   }
 
-  // Fallback suave en prod, error en dev
+  // 3) Fallback suave en dev, excepción en prod
   if (isDev) {
-    console.warn(`Slug not found for: ${lang}/${slug}`);
-    return { title: 'Not Found', description: '' };
+    console.warn(`No content for ${lang}/${slug}, falling back to empty object.`);
+    return {};
   } else {
-    throw new Error(`Slug not found for: ${lang}/${slug}`);
+    throw new Error(`No content for ${lang}/${slug}`);
   }
 }

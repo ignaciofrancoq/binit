@@ -2,34 +2,78 @@
 const { lang, content } = Astro.props;
 ---
 
-<section class="banner" style="background-image: url('/img/home/img-01.png');">
+<section class="section_01 banner" style="background-image: url('/img/home/img-01.png');">
   <div class="banner__content">
-    <h1>BINIT AI Strategy</h1>
-    <h2>Desarrollamos soluciones de negocio potenciadas con IA Generativa.</h2>
-    <p>Utilizamos nuestra tecnología avanzada, brindamos acompañamiento experto y tenemos un historial de experiencia demostrable.</p>
-    <a href="/contacto" class="banner__button">Quiero potenciar mi negocio</a>
+    <h1>{content.main_banner.heading}</h1>
+    <h2>{content.main_banner.subtitle}</h2>
+    <p>{content.main_banner.content}</p>
+    <a href="/contacto" class="banner__button">{content.main_banner.buttonText}</a>
   </div>
 </section>
-<section class="section-what-we-do">
+<section class="section_02">
   <div class="content-text">
-    <h3>¿Qué hacemos?<h3>
-    <p>En <strong>Binit</strong> nos especializamos en el diseño, consultoría y desarrollo de software, creación de plataformas tecnológicas, transformación digital e inteligencia artificial generativa aplicada.</p>
-    <p>Nuestro <strong>objetivo</strong> es impulsar la transformación digital de tus productos, servicios y negocio. Nuestros expertos en IA generativa están listos para potenciar tus proyectos a través de un proceso ágil y centrado en tus necesidades.</p>
+    <h3>{content.list_carousel.heading}<h3>
+    <p set:html={content.list_carousel.intro_0}></p>
+    <p set:html={content.list_carousel.intro_1}></p>
   </div>
 
-  <div class="carousel">
-    <div>
-      <img src="" />
-      <h3>Impulsamos negocios con soluciones de IA</h3>
-      <p>Potenciamos negocios con soluciones de IA personalizadas, logrando posicionar a las empresas como líderes en sus industrias.</p>
+  <div id="home__carousel" class="carousel splide">
+    <div class="splide__track">
+      <ul class="splide__list">
+        {content.list_carousel.items.map((item: { icon: string; title: string; content: string }) => (
+          <li class="splide__slide">
+            <img src={`/img/home/carousel/${item.icon}.svg`} alt={item.title} />
+            <h3>{item.title}</h3>
+            <p set:html={item.content}></p>
+          </li>
+        ))}
+      </ul>
     </div>
-    <div></div>
   </div>
 </section>
 
+<section class="section_03">
+  <div class="content-text">
+    <h3>{content.how_we_do.heading}<h3>
+    <p set:html={content.how_we_do.intro_0}></p>
+    <p set:html={content.how_we_do.intro_1}></p>
+    <p set:html={content.how_we_do.intro_2}></p>
+  </div>
+  <img src="/img/home/img-02.png" class="content-img" />
+</section>
 
-<section>
-<h1>{content.title}</h1>
-<p>{content.description}</p>
+<section class="section_04">
+  <h3>{content.solutions.heading}</h3>
+  <div class="content-items"> 
+    {content.solutions.items.map((item: { icon: string; title: string; link: string }) => (
+          <a href={item.link} title={item.title}>
+            <img src={`/img/home/solutions/${item.icon}.svg`} alt={item.title} />
+            <span>{item.title}</span>
+          </a>
+    ))}
+  </div>
+  <a href="#" class="button">{content.solutions.buttonText}</a>
+</section>
 
+<section class="section_05">
+  <h3>{content.clients.heading}</h3>
+  <div class="content-items"> 
+    {content.clients.items.map((item: { icon: string; title: string }) => (
+      <img src={`/img/home/clients/${item.icon}.png`} alt={item.title} />
+    ))}
+  </div>
+</section>
+
+<section class="section_06 banner" style="background-image: url('/img/home/img-03.png');">
+  <div class="banner__content">
+    <h3>{content.we_are.heading}</h3>
+    <!-- LLAMAR LAS DEMAS PALABRAS -->
+    <p>{content.we_are.content}</p>
+  </div>
+</section>
+
+<section class="section_07">
+  <h3>{content.world.heading}</h3>
+  <img src={`/img/home/${content.world.icon}.png`} alt="world" />
+  <a href="/contacto" class="banner__button">{content.world.buttonText}</a>
 </section>

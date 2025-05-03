@@ -1,0 +1,13 @@
+{
+    "extends": "astro/tsconfigs/strict",   
+    "compilerOptions": {
+      "types": ["vite/client"]             /* Para que TS conozca import.meta.env, import.meta.glob */,
+      "moduleResolution": "node"
+    },
+    "include": [
+      "src",                                /* todo tu código fuente */
+      "src/env.d.ts"                        /* el archivo de referencias que vas a crear */
+    ],
+    "exclude": ["node_modules", "dist"]
+  }
+  

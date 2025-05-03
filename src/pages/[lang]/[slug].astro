@@ -18,10 +18,11 @@ const Page = await loadPage(slug, lang);
 <BaseLayout lang={lang}>
   <Fragment slot="head">
     <Seo
-      title={content.title + ' | Binit'}
-      description={content.description}
-      keywords={content.description}
+      title={content.seo.title }
+      description={content.seo.description}
+      keywords={content.seo.keywords}
       url={`https://binit.tech/${lang}/${slug}`}
+      image={content.seo.image}
     />
   </Fragment>
 

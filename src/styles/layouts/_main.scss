@@ -2,6 +2,7 @@
 @use '../base/mixins' as mixins;
 
 main{
+    overflow: hidden;
     padding: 0 variables.$padding-page 1rem;
     color: white;
     min-height: 100vh;

@@ -21,6 +21,9 @@ const { lang } = Astro.props;
     <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="/styles/global.css" />
+
+    <!--Carousel -->
+    <link rel="stylesheet" href="/styles/splide.min.css" />
   </head>
   <body>
     <Header lang={lang} currentPath={Astro.url.pathname} />
@@ -32,4 +35,6 @@ const { lang } = Astro.props;
 
     <Footer lang={lang} />
   </body>
+  <script src="/js/splide.min.js" is:inline></script>
+  <script src="/js/slider.js" is:inline defer></script> <!--Solo cargar en la home? -->
 </html>
