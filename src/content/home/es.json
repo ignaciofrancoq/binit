@@ -101,7 +101,7 @@
       ]
     },
     "clients":{
-      "heading": "Algunas de las startups y corporaciones que confían en nosotros",
+      "heading": "Algunas de las startups y corporaciones </br>que confían en nosotros",
       "items": [
         {
           "icon": "4d",
@@ -174,14 +174,14 @@
       ]
     },
     "we_are":{
-      "heading":"Somos",
-      "items": [ "innovadores", "creativos", "eficiente" ],
-      "content": "Somos una empresa líder en consultoría, desarrollo de software e implementación de inteligencia artificial generativa. Formamos parte del grupo Subgen.AI, una empresa dedicada a impulsar la innovación de la IA generativa."
+      "heading":"Somos ",
+      "items": [ "innovadores", "creativos", "eficientes", "innovadores", "creativos", "eficientes" ],
+      "content": "Somos una empresa líder en consultoría, desarrollo de software e implementación de inteligencia artificial generativa.</br> Formamos parte del grupo <a href='https://subgen.ai/' title='SubgenAI'>Subgen.AI</a>, una empresa dedicada a impulsar la innovación de la IA generativa."
     },
     "world":{
-      "heading":"Transformamos realidades alrededor del mundo",
+      "heading":"Transformamos realidades </br>alrededor del mundo",
       "icon": "map-es",
-      "buttonText": "Hablemos"
+      "buttonText": "¡Hablemos!"
     }
   }
   

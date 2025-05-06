@@ -6,7 +6,7 @@
       "image": "https://binit.tech/media/eglf2qcj/logo_bajada.png"
     },
     "main_banner": {
-      "title": "BINIT AI Strategy",
+      "heading": "BINIT AI Strategy",
       "subtitle": "We develop business solutions powered by Generative AI",
       "content": "We leverage our advanced technology, provide expert support, and have a demonstrable track record of success.",
       "buttonText": "I want to boost my business"
@@ -174,8 +174,8 @@
       ]
     },
     "we_are":{
-      "heading":"Somos",
-      "items": [ "innovadores", "creativos", "eficiente" ],
+      "heading":"Somos ",
+      "items": [ "innovadores", "creativos", "eficiente", "innovadores", "creativos", "eficiente" ],
       "content": "Somos una empresa líder en consultoría, desarrollo de software e implementación de inteligencia artificial generativa. Formamos parte del grupo Subgen.AI, una empresa dedicada a impulsar la innovación de la IA generativa."
     },
     "world":{

@@ -16,7 +16,7 @@ const otherLangs = Object.entries(languages)
     url: currentRouteKey ? getUrl(currentRouteKey, code as Lang) : `/${code}/`,
   }));
 ---
-<header>
+<header class="site-header">
 <nav class="menu">
   <a href={getUrl('home', lang)} class="logo">
     <img src="/img/logo.svg" alt="Logo" width="135" height="40" />

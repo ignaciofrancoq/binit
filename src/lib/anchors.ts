@@ -6,9 +6,9 @@ export const anchors = {
     es: 'servicios',
     pt: 'servicos',
   },
-  contact: {
-    en: 'contact',
-    es: 'contacto',
-    pt: 'contato',
+  'about-us': {
+    en: 'about-us',
+    es: 'nosotros',
+    pt: 'nosotros',
   },
 };

@@ -17,21 +17,16 @@ export const routes = {
     es: 'casos-de-exito',
     pt: 'estudos-de-caso',
   },
-  'about-us': {
-    en: 'about-us',
-    es: 'nosotros',
-    pt: 'sobre-nos',
-  },
   career: {
     en: 'career',
     es: 'carrera',
     pt: 'carreira',
   },
-  /*contact: {
+  contact: {
     en: 'contact',
     es: 'contacto',
     pt: 'contato',
-  },*/
+  }
 };
 
 export function getRouteKeyFromSlug(slug: string, lang: Lang): string | undefined {

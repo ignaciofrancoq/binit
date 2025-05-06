@@ -2,9 +2,10 @@
 const { lang, content } = Astro.props;
 ---
 
-<section>
-    strategy
-  <h1>{content.title}</h1>
-  <p>{content.description}</p>
-
+<section class="section_binit_01 banner_main" style="background-image: url('/img/binit-strategy/img-01.png');">
+  <div class="banner__content content-text">
+    <h1 set:html={content.main_banner.heading}></h1>
+    <h2 set:html={content.main_banner.subtitle}></h2>
+    <a href="/contacto" class="banner__button btn_orange">{content.main_banner.buttonText}</a>
+  </div>
 </section>

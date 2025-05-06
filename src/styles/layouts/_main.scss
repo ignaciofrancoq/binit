@@ -9,4 +9,70 @@ main{
     @include mixins.respond-to(2xl) {
         padding: 0 variables.$padding-page-2xl 1rem;
     }
+
+    h1{
+        font-size: 64px;
+        line-height: 76px;
+        font-weight: 600;
+        margin-bottom: 1rem;
+    }
+
+    h2{
+        font-size: 40px;
+        line-height: 62px;
+        font-weight: 600;
+        margin-bottom: 1rem;
+    }
+    p{
+        font-size: 20px;
+        line-height: 30px;
+        font-weight: 300;
+        strong{
+            font-weight: 600;
+        }
+    }
+
+    .btn_orange {
+        display: inline-block;
+        margin-top: 1.5rem;
+        padding: 0.7rem 1.5rem;
+        background-color: variables.$color-orange;
+        color: #fff;
+        text-decoration: none;
+        font-size: 24px;
+        font-weight: 600;
+        &:hover {
+            filter: brightness(1.2);
+            box-shadow: 0 0 20px rgba(0, 123, 255, 0.8);
+        }
+    }
+
+    a{
+        color: #fff;
+    }
+
+    .banner_main {
+        position: relative;
+        width: 100vw;
+        margin: 0;
+        padding: 0;
+        left: 50%;
+        right: 50%;
+        transform: translateX(-50%);
+        height: 80vh;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        text-align: left;
+        color: #fff;
+        .banner__content{
+          margin-left:variables.$padding-page;
+          @include mixins.respond-to(2xl) {
+            margin-left:variables.$padding-page-2xl;
+          }
+        }
+    }
 }

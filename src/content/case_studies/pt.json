@@ -6,7 +6,33 @@
       "keywords": "Innovation, Technology, Business Vision, Technological platforms, Innovative, Co‑create, Startups, Technological partner, Digital Scale, Development teams, Logistics, Smart retail, Digital Service Platforms, Agrotech, Healthcare, Shared economies, Community networks, Challenge, Digital transformation, Methodology, Great Place To Work, Revenue Streams, Technological ecosystems",
       "image": "https://binit.tech/media/eglf2qcj/logo_bajada.png"
     },
-    "title": "estudos de caso",
-    "description": "Oportunidades de carreira na Binit."
+    "main_banner": {
+      "heading": "Casos de estudio",
+      "subtitle": "Conozca algunos de nuestros casos de negocio y proyectos innovadores."
+    },
+    "cases": [
+      {
+        "heading": "Agro-Tech",
+        "items": [
+          {
+            "icon": "icon-01",
+            "icon-title": "jbs",
+            "title": "Sistema de gestión integral de granjas productivas.​",
+            "content": "Potente grupo de sistemas desarrollados para la industria de producción alimenticia. Brinda información inmediata que permite tomar decisiones, optimizar recursos, evitar sobrecostos e improductividades."
+          }
+        ]
+      },
+      {
+        "heading": "Agro-Tech",
+        "items": [
+          {
+            "icon": "icon-01",
+            "icon-title": "jbs",
+            "title": "Sistema de gestión integral de granjas productivas.​",
+            "content": "Potente grupo de sistemas desarrollados para la industria de producción alimenticia. Brinda información inmediata que permite tomar decisiones, optimizar recursos, evitar sobrecostos e improductividades."
+          }
+        ]
+      }
+    ]
   }
   

@@ -2,29 +2,33 @@
 const { lang, content } = Astro.props;
 ---
 
-<section class="section_01 banner" style="background-image: url('/img/home/img-01.png');">
-  <div class="banner__content">
+<section class="section_home_01 banner_main" style="background-image: url('/img/home/img-01.png');">
+  <div class="banner__content content-text">
     <h1>{content.main_banner.heading}</h1>
     <h2>{content.main_banner.subtitle}</h2>
     <p>{content.main_banner.content}</p>
-    <a href="/contacto" class="banner__button">{content.main_banner.buttonText}</a>
+    <a href="/contacto" class="banner__button btn_orange">{content.main_banner.buttonText}</a>
   </div>
 </section>
-<section class="section_02">
+
+<section class="section_home_02">
   <div class="content-text">
-    <h3>{content.list_carousel.heading}<h3>
+    <h2>{content.list_carousel.heading}</h2>
     <p set:html={content.list_carousel.intro_0}></p>
     <p set:html={content.list_carousel.intro_1}></p>
   </div>
 
   <div id="home__carousel" class="carousel splide">
+    <span class="box-degrade"></span>
     <div class="splide__track">
       <ul class="splide__list">
         {content.list_carousel.items.map((item: { icon: string; title: string; content: string }) => (
           <li class="splide__slide">
-            <img src={`/img/home/carousel/${item.icon}.svg`} alt={item.title} />
-            <h3>{item.title}</h3>
-            <p set:html={item.content}></p>
+            <div class="box-carousel">
+              <img class="carousel-img" src={`/img/home/carousel/${item.icon}.svg`} alt={item.title} />
+              <h3>{item.title}</h3>
+              <p set:html={item.content}></p>
+            </div>
           </li>
         ))}
       </ul>
@@ -32,31 +36,33 @@ const { lang, content } = Astro.props;
   </div>
 </section>
 
-<section class="section_03">
+<section class="section_home_03" style="background-image: url('/img/home/img-02.png');">
   <div class="content-text">
-    <h3>{content.how_we_do.heading}<h3>
+    <h2>{content.how_we_do.heading}</h2>
     <p set:html={content.how_we_do.intro_0}></p>
     <p set:html={content.how_we_do.intro_1}></p>
     <p set:html={content.how_we_do.intro_2}></p>
   </div>
-  <img src="/img/home/img-02.png" class="content-img" />
+  <!-- <img src="/img/home/img-02.png" class="content-img" />-->
 </section>
 
-<section class="section_04">
-  <h3>{content.solutions.heading}</h3>
+<section id="servicios" class="section_home_04">
+  <h2>{content.solutions.heading}</h2>
   <div class="content-items"> 
     {content.solutions.items.map((item: { icon: string; title: string; link: string }) => (
-          <a href={item.link} title={item.title}>
-            <img src={`/img/home/solutions/${item.icon}.svg`} alt={item.title} />
+          <a class="item" href={item.link} title={item.title}>
+            <div class="box-img">
+              <img src={`/img/home/solutions/${item.icon}.svg`} alt={item.title} width="107" height="80" />
+            </div>
             <span>{item.title}</span>
           </a>
     ))}
   </div>
-  <a href="#" class="button">{content.solutions.buttonText}</a>
+  <a href="#" class="btn_orange ">{content.solutions.buttonText}</a>
 </section>
 
-<section class="section_05">
-  <h3>{content.clients.heading}</h3>
+<section class="section_home_05 brands">
+  <h2 set:html={content.clients.heading}></h2>
   <div class="content-items"> 
     {content.clients.items.map((item: { icon: string; title: string }) => (
       <img src={`/img/home/clients/${item.icon}.png`} alt={item.title} />
@@ -64,16 +70,25 @@ const { lang, content } = Astro.props;
   </div>
 </section>
 
-<section class="section_06 banner" style="background-image: url('/img/home/img-03.png');">
+<section id="nosotros" class="section_home_06 banner_main" style="background-image: url('/img/home/img-03.png');">
   <div class="banner__content">
-    <h3>{content.we_are.heading}</h3>
-    <!-- LLAMAR LAS DEMAS PALABRAS -->
-    <p>{content.we_are.content}</p>
+    <div class="headline">
+      <span class="title">{content.we_are.heading}</span>
+      <div class="word-carousel">
+        <div class="words">
+          {content.we_are.items.map((item: string) => (
+            <span>{item}</span>
+          ))}
+        </div>
+      </div>
+    </div>
+
+    <p set:html={content.we_are.content}></p>
   </div>
 </section>
 
-<section class="section_07">
-  <h3>{content.world.heading}</h3>
+<section class="section_home_07">
+  <h2 set:html={content.world.heading}></h2>
   <img src={`/img/home/${content.world.icon}.png`} alt="world" />
-  <a href="/contacto" class="banner__button">{content.world.buttonText}</a>
+  <a href="/contacto" class="banner__button btn_orange">{content.world.buttonText}</a>
 </section>

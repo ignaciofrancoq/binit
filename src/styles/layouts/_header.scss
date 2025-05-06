@@ -2,7 +2,6 @@
 @use '../base/mixins' as mixins;
 
 header {
-  //TO DO, cuando scroleas que sea un color solido el fondo
   position: fixed;
   z-index: 9;
   width: 100%;
@@ -11,11 +10,16 @@ header {
     rgba(variables.$color-primary, 0.9), // color oscuro 80% arriba
     rgba(variables.$color-primary, 0)    // totalmente transparente abajo
   );
-  padding: 1.5rem variables.$padding-page;
+  padding: 1rem variables.$padding-page;
   color: white;
 
+  &.scrolled {
+    background-color: variables.$color-primary;
+    backdrop-filter: blur(8px); // opcional: para efecto glass
+  }
+
   @include mixins.respond-to(2xl) {
-    padding: 1.5rem variables.$padding-page-2xl;
+    padding: 1rem variables.$padding-page-2xl;
   }
 
   nav {
@@ -45,6 +49,9 @@ header {
             font-style: normal;
             font-weight: 400;
             line-height: normal;
+            &:hover {
+              font-weight: bold;
+            }            
           }
         }
       }

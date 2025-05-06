@@ -5,7 +5,34 @@
       "keywords": "Innovation, Technology, Business Vision, Technological platforms, Innovative, Co‑create, Startups, Technological partner, Digital Scale, Development teams, Logistics, Smart retail, Digital Service Platforms, Agrotech, Healthcare, Shared economies, Community networks, Challenge, Digital transformation, Methodology, Great Place To Work, Revenue Streams, Technological ecosystems",
       "image": "https://binit.tech/media/eglf2qcj/logo_bajada.png"
     },
-    "title": "Career",
-    "description": "Career opportunities at Binit."
+    "main_banner": {
+      "heading": "Transformemos el futuro <span>juntos</span>",
+      "subtitle": "¡Desarrolla tu carrera junto a Binit!"
+    },
+    "why_work": {
+      "heading": "¿Por qué trabajar con nosotros?",
+      "content": "Somos un equipo diverso y global de profesionales con habilidades únicas pero complementarias, que buscamos mejorar a través del aprendizaje continuo.",
+      "items": [
+        {
+          "icon": "icon-01",
+          "title": "Tecnología de vanguardia​",
+          "content": "Trabajamos con las últimas tecnologías, somos precursores en la aplicación de Inteligencia Artificial Generativa y utilizamos las metodologías de trabajo más innovadoras en nuestros desarrollos."
+        },
+        {
+          "icon": "icon-02",
+          "title": "Crecimiento y desarrollo​",
+          "content": "Impulsamos tu crecimiento profesional en un entorno dinámico, brindándote oportunidades para aprender y desarrollarte en áreas clave como la inteligencia artificial y la transformación digital."
+        },
+        {
+          "icon": "icon-03",
+          "title": "Múltiples industrias​",
+          "content": "Trabajamos con empresas líderes de diferentes industrias. Podes desarrollar tu trayectoria profesional en una industria en particular o cambiar de industria dentro de múltiples opciones."
+        }
+      ],
+      "join_us": {
+        "icon": "icon-plus",
+        "content": "Si te interesa formar parte de nuestro equipo podes postularte en las vacantes abiertas que tenemos en <a href='https://www.linkedin.com/company/binit-tech/' title='Binit LinkeIn'>LinkedIn</a> o ponerte en contacto con el equipo de Human Capital enviando un correo electrónico a <strong>busquedas@binit.tech</strong>"
+      }
+    }
   }
   

@@ -1,41 +1,207 @@
 @use '../base/variables';
 @use '../base/mixins' as mixins;
 
-.banner {
-  position: relative;
-  width: 100vw; /* 100% del ancho de la ventana */
-  margin: 0;
-  padding: 0;
-  left: 50%;
-  right: 50%;
-  transform: translateX(-50%);
-  height: 100vh;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  text-align: left;
-  color: #fff;
-  .banner__content {
+section{
+  margin: 7rem 0;
+}
+
+.section_home_01{
+  .content-text{
+    width: 38%;
     padding: 2rem;
     border-radius: 8px;
 
-    margin-left:variables.$padding-page;
-    @include mixins.respond-to(2xl) {
-      margin-left:variables.$padding-page-2xl;
+    h2{
+      font-size: 32px;
+      line-height: 48px;
+      font-weight: 400;
+    }
+    p{
+      padding-right: 19%;
+      font-size: 20px;
+      margin-bottom: 1rem;
     }
   }
-  
-  .banner__button {
+}
+
+.section_home_02{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  .content-text{
+    width: 50%;
+    max-width: 50%;
+    p{
+      margin: 1.5rem 0;
+    }
+  }
+  #home__carousel{
+    width: 40%;
+    .splide__slide{
+      margin: 0 1rem;  
+      .box-carousel{
+        width: 300px;
+        height: 100%;
+        border: 2px solid #005BBF;
+        background-color: #061E46;
+        padding: 1.5rem 2rem;
+        border-radius: 23px;
+        .carousel-img{
+          margin-bottom: 1rem;
+        }
+        h3{
+          font-size: 18px;
+          line-height: 30px;
+          margin-bottom: 0.8rem;
+        }
+        p{
+          font-size: 18px;
+        }
+      }
+    }
+    .splide__arrows{
+      position: absolute;
+      bottom: -40px;
+      left: 28%;
+      .splide__arrow--prev{
+        right: 1rem;
+        left: 0;
+      }
+      .splide__arrow--next{
+        left: 2.5rem;
+        right: 0;
+      }
+    }
+    span.box-degrade{
+      background: linear-gradient(to right, transparent, variables.$color-bg);
+      width: 50%;
+      height: 100%;
+      position: absolute;
+      z-index: 99;
+      right: 0;
+    }
+  }
+}
+
+.section_home_03{
+  background-repeat: no-repeat;
+  background-position: right;
+  display: flex;
+  .content-text{
+    width: 50%;
+    p{
+      font-size: 18px;
+      margin: 1rem 0;
+    }
+  }
+}
+
+.section_home_04{
+  text-align: center;
+  .content-items{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 2rem 1rem;
+    margin: 4rem 0;
+    .item{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      align-content: center;
+      text-decoration: none;
+      .box-img{
+        border: 2px solid variables.$color-blue-dark;
+        padding: 0.8rem 1rem;
+        margin-bottom: 1rem;
+      }
+      span{
+        font-size: 20px;
+        font-weight: 300;
+      }
+      &:hover{
+        .box-img{
+          border: 2px solid variables.$color-orange;
+        }
+        span{
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}
+
+.section_home_05{
+  text-align: center;
+
+  h2{
+    margin-bottom: 2rem;
+  }
+
+  .content-items{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem 4rem;
+    img {
+      flex: 0 0 calc(100% / 6 - 1rem); 
+      max-width: 150px;              
+      height: auto;
+    }
+  }
+}
+
+.section_home_06{
+  height: 60vh;
+
+  .headline .title{
+    font-size: 96px;
+    height: 96px;
+    font-weight: 600;
+  }
+
+  /*Animacion*/
+  .word-carousel {
+    height: 86px;
+    overflow: hidden;
+    position: relative;
     display: inline-block;
-    margin-top: 1.5rem;
-    padding: 0.75rem 1.5rem;
-    background-color: #ff6600;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 4px;
-    font-weight: bold;
+  }
+  
+  .words {
+    display: flex;
+    flex-direction: column;
+    animation: vertical-loop 6s ease-in-out infinite;
+  }
+  
+  .words span {
+    font-size: 96px;
+    font-weight: 600;
+    height: 96px;
+    line-height: 96px;
+    text-align: left;
+  }
+  
+  @keyframes vertical-loop {
+    0%, 10% { transform: translateY(0); }
+    30%, 40% { transform: translateY(-96px); }
+    60%, 70% { transform: translateY(-192px); }
+    90%, 100% { transform: translateY(-288px); }
+  }
+  /*Animacion end*/
+
+  p{
+    width: 60%;
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 300;
+  }
+}
+
+.section_home_07{
+  text-align: center;
+  img{
+    width: 100%;
+    margin: 0 auto;
   }
 }
