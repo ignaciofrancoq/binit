@@ -3,12 +3,7 @@
   "type": "module",
   "scripts": {
     "dev": "astro dev",
-    "dev:sass": "sass --watch src/styles/global.scss public/styles/global.css",
-    "dev:all": "concurrently \"npm:dev\" \"npm:dev:sass\"",
-
     "build": "astro build",
-    "build:sass": "sass src/styles/global.scss public/styles/global.css",
-    
     "preview": "astro preview"
   },
   "dependencies": {

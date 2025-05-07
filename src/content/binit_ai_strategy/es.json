@@ -7,7 +7,7 @@
     },
     "main_banner": {
       "heading": "Impulsemos su negocio </br>con IA",
-      "subtitle": "Estamos listos para llevar su negocio al siguiente nivel. </br>¿Y usted?",
+      "subtitle": "Estamos listos para llevar su negocio al siguiente </br>nivel. ¿Y usted?",
       "buttonText": "Estoy listo"
     },
     "binit_ai": {
@@ -31,7 +31,7 @@
       ]
     },
     "integration_ai": {
-      "heading": "<span class='heading-degrade'>Integración de IA generativa:</span> mucho más que un chatbot",
+      "heading": "<span class='gradient-text'>Integración de IA generativa:</span> mucho más que un chatbot",
       "content": "Proveemos múltiples soluciones de integración de IA generativa listas para llevar su negocio al siguiente nivel. Explore todas las formas en las que puede revolucionar sus procesos, mejorar la eficiencia y transformar sus productos y servicios.",
       "items": [
         {
@@ -62,13 +62,13 @@
       ]
     },
     "idea": {
-      "heading": "Lo ayudamos a llevar a cabo sus ideas, <span class='heading-degrade'>de principio a fin.</span>",
+      "heading": "Lo ayudamos a llevar a cabo sus ideas, </br><span class='gradient-text'>de principio a fin.</span>",
       "content": "Conocemos los desafíos que se presentan al querer transformar una idea en un producto que pueda insertarse en el mercado. Nuestra misión es acompañarte durante todo el proceso y hacerlo posible.",
-      "icon": "linea-tiempo-es",
+      "icon": "timeline_es",
       "buttonText": "Contáctenos"
     },
     "serenity_star": {
-      "heading": "Conozca <span>Serenity Star</span>, la tecnología que lo hace posible.",
+      "heading": "Conozca <span>Serenity Star</span>,</br> la tecnología que lo hace posible.",
       "content": "Serenity Star acelera la adopción de la IA con soluciones integradas, altamente adaptables y centradas en la gobernanza, lo que garantiza una implementación rápida y compatible, manteniendo operaciones rentables adaptadas a las necesidades generalizadas y cambiantes de las organizaciones.​",
       "buttonText": "Quiero saber más"
     }

@@ -1,9 +1,13 @@
+@use '../base/variables';
+@use '../base/mixins' as mixins;
+
 .section_binit_01{
     .content-text{
       width: 48%;
-      padding: 2rem;
       border-radius: 8px;
-
+      @include mixins.respond-to(2xl) {
+        width: 70%;
+      }
       h2{
         font-size: 32px;
         line-height: 48px;
@@ -13,6 +17,48 @@
         padding-right: 19%;
         font-size: 20px;
         margin-bottom: 1rem;
+      }
+    }
+  }
+
+  .section_binit_02{
+    text-align: center;
+    h2{
+      display: inline-block;
+      font-size: 96px;
+      line-height: 124px;
+      font-weight: 700;
+      margin-bottom: 4rem;
+    }
+
+    #binit_gift_02{
+      transform: rotate(180deg);
+    }
+
+    .content-strategy{
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 5rem;
+
+      .content-text{
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        padding: 0 5rem;
+        p{
+          font-size: 20px;
+          line-height: 32px;
+          margin: 0.6rem 0;
+        }
+      }
+    }
+    .content-item{
+      display: flex;
+      flex-wrap: nowrap;
+      .item{
+        text-align: left;
       }
     }
   }

@@ -10,7 +10,9 @@ section{
     width: 38%;
     padding: 2rem;
     border-radius: 8px;
-
+    @include mixins.respond-to(2xl) {
+      width: 70%;
+    }
     h2{
       font-size: 32px;
       line-height: 48px;

@@ -9,3 +9,54 @@ const { lang, content } = Astro.props;
     <a href="/contacto" class="banner__button btn_orange">{content.main_banner.buttonText}</a>
   </div>
 </section>
+
+
+<section class="section_binit_02">
+  <h2 set:html={content.binit_ai.heading} class="gradient-text"></h2>
+  <div class="content-strategy">
+    <img src="/img/binit-strategy/binit_arrow.gif" title="binit ai gif" class="binit_gift">
+    <div class="content-text">
+      <p set:html={content.binit_ai.intro_0}></p>
+      <p set:html={content.binit_ai.intro_1}></p>
+      <p set:html={content.binit_ai.intro_2}></p>
+    </div>
+    <img id="binit_gift_02" src="/img/binit-strategy/binit_arrow.gif" title="binit ai gif" class="binit_gift">
+  </div>
+  <div class="content-item">
+    {content.binit_ai.items.map((item: { title: string; content: string }) => (
+      <div class="item">
+        <h3>{item.title}</h3>
+        <p>{item.content}</p>
+      </div>
+    ))}
+  </div>
+</section>
+
+<section class="section_binit_03">
+  <h2 set:html={content.integration_ai.heading}> </h2>
+  <p set:html={content.integration_ai.content}></p>
+
+  <div class="content-item">
+    {content.integration_ai.items.map((item: { icon: string; title: string; content: string }) => (
+      <div class="item">
+        <h3>{item.title}  <img class="carousel-img" src={`/img/binit-strategy/icons/${item.icon}.svg`} alt={item.title} /></h3>
+        <p>{item.content}</p>
+      </div>
+    ))}
+  </div>
+</section>
+
+<section class="section_binit_04">
+  <h2 set:html={content.idea.heading}> </h2>
+  <p set:html={content.idea.content}></p>
+
+  <img class="carousel-img" src={`/img/binit-strategy/${content.idea.icon}.svg`} alt="linea de tiempo" />
+  <a href="/contacto" class="banner__button btn_orange">{content.idea.buttonText}</a>
+</section>
+
+<section class="section_binit_05">
+  <h2 set:html={content.serenity_star.heading}> </h2>
+  <p set:html={content.serenity_star.content}></p>
+
+  <a href="/contacto" class="banner__button btn_orange">{content.serenity_star.buttonText}</a>
+</section>

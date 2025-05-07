@@ -4,16 +4,16 @@ const { lang, content } = Astro.props;
 
 <section class="section_home_01 banner_main" style="background-image: url('/img/home/img-01.png');">
   <div class="banner__content content-text">
-    <h1>{content.main_banner.heading}</h1>
-    <h2>{content.main_banner.subtitle}</h2>
-    <p>{content.main_banner.content}</p>
+    <h1 set:html={content.main_banner.heading}></h1>
+    <h2 set:html={content.main_banner.subtitle}></h2>
+    <p set:html={content.main_banner.content}></p>
     <a href="/contacto" class="banner__button btn_orange">{content.main_banner.buttonText}</a>
   </div>
 </section>
 
 <section class="section_home_02">
   <div class="content-text">
-    <h2>{content.list_carousel.heading}</h2>
+    <h2 set:html={content.list_carousel.heading}></h2>
     <p set:html={content.list_carousel.intro_0}></p>
     <p set:html={content.list_carousel.intro_1}></p>
   </div>
@@ -26,7 +26,7 @@ const { lang, content } = Astro.props;
           <li class="splide__slide">
             <div class="box-carousel">
               <img class="carousel-img" src={`/img/home/carousel/${item.icon}.svg`} alt={item.title} />
-              <h3>{item.title}</h3>
+              <h3 set:html={item.title}></h3>
               <p set:html={item.content}></p>
             </div>
           </li>
@@ -38,7 +38,7 @@ const { lang, content } = Astro.props;
 
 <section class="section_home_03" style="background-image: url('/img/home/img-02.png');">
   <div class="content-text">
-    <h2>{content.how_we_do.heading}</h2>
+    <h2 set:html={content.how_we_do.heading}></h2>
     <p set:html={content.how_we_do.intro_0}></p>
     <p set:html={content.how_we_do.intro_1}></p>
     <p set:html={content.how_we_do.intro_2}></p>
@@ -47,7 +47,7 @@ const { lang, content } = Astro.props;
 </section>
 
 <section id="servicios" class="section_home_04">
-  <h2>{content.solutions.heading}</h2>
+  <h2 set:html={content.solutions.heading}></h2>
   <div class="content-items"> 
     {content.solutions.items.map((item: { icon: string; title: string; link: string }) => (
           <a class="item" href={item.link} title={item.title}>

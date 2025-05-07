@@ -178,6 +178,12 @@ main .banner_main .banner__content {
   }
 }
 
+.gradient-text {
+  background: linear-gradient(to right, #4862FF, #EB5C21);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 footer {
   background-color: #000;
   padding: 6rem 20rem 2rem;
@@ -468,6 +474,23 @@ section {
   padding-right: 19%;
   font-size: 20px;
   margin-bottom: 1rem;
+}
+
+.section_binit_02 {
+  text-align: center;
+}
+.section_binit_02 h2 {
+  display: inline-block;
+  font-size: 96px;
+  line-height: 124px;
+  font-weight: 700;
+  margin-bottom: 4rem;
+}
+.section_binit_02 .content-strategy {
+  display: flex;
+}
+.section_binit_02 .content-strategy .content-text {
+  display: flex;
 }
 
 /*# sourceMappingURL=global.css.map */

@@ -68,6 +68,9 @@ main{
         justify-content: flex-start;
         text-align: left;
         color: #fff;
+        @include mixins.respond-to(2xl) {
+            height: 100vh;
+        }
         .banner__content{
           margin-left:variables.$padding-page;
           @include mixins.respond-to(2xl) {
@@ -75,4 +78,10 @@ main{
           }
         }
     }
+}
+
+.gradient-text {
+    background: linear-gradient(to right, variables.$color-blue-degrade, variables.$color-orange-degrade);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
