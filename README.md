@@ -69,6 +69,11 @@ Una vez que hayas realizado el build, puedes subir los archivos generados en la 
 - `npm run build`: Construye los archivos optimizados para producción.
 - `npm run preview`: Muestra el sitio generado como se verá en producción (usando los archivos en `dist/`).
 
+## URL Home
+`http://localhost:4321/es/`
+
 ## Configuración de idioma
 
-TODO:
+TODO, detallar como sumar idiomas:
+`src/content`
+`src/lib/i18n.ts`

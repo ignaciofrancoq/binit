@@ -42,10 +42,13 @@ section{
     width: 40%;
     .splide__slide{
       margin: 0 1rem;  
+
+      &.is-active{
+      }
       .box-carousel{
         width: 300px;
         height: 100%;
-        border: 2px solid #005BBF;
+        border: 2px solid variables.$color-blue-line;
         background-color: #061E46;
         padding: 1.5rem 2rem;
         border-radius: 23px;
@@ -76,12 +79,18 @@ section{
       }
     }
     span.box-degrade{
-      background: linear-gradient(to right, transparent, variables.$color-bg);
-      width: 50%;
+      width: 30%;
       height: 100%;
       position: absolute;
       z-index: 99;
-      right: 0;
+      &.right{
+        right: 0;
+        background: linear-gradient(to right, transparent, variables.$color-bg);
+      }
+      &.left{
+        left: 0;
+        background: linear-gradient(to left, transparent, variables.$color-bg);
+      }
     }
   }
 }

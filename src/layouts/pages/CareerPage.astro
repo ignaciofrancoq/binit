@@ -8,3 +8,22 @@ const { lang, content } = Astro.props;
     <h2 set:html={content.main_banner.subtitle}></h2>
   </div>
 </section>
+
+<section class="section_career_02">
+  <h2 set:html={content.why_work.heading}> </h2>
+  <p set:html={content.why_work.content} class="subtitle"></p>
+
+  <div class="content-item">
+    {content.why_work.items.map((item: { icon: string; title: string; content: string }, index: number) => (
+      <div class="item">
+        <img class={`icon-img-0${index}`} src={`/img/career/${item.icon}.png`} alt={item.title} />
+        <h3>{item.title}</h3>
+        <p>{item.content}</p>
+      </div>
+    ))}
+  </div>
+  <!--<div class="content-end">
+    <img src="/img/career/+.png">
+    <p set:html={content.join_us.content} ></p>
+  </div>-->
+</section>

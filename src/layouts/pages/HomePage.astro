@@ -19,7 +19,8 @@ const { lang, content } = Astro.props;
   </div>
 
   <div id="home__carousel" class="carousel splide">
-    <span class="box-degrade"></span>
+    <span class="box-degrade left"></span>
+    <span class="box-degrade right"></span>
     <div class="splide__track">
       <ul class="splide__list">
         {content.list_carousel.items.map((item: { icon: string; title: string; content: string }) => (

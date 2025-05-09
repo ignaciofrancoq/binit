@@ -1,0 +1,61 @@
+
+@use '../base/variables';
+@use '../base/mixins' as mixins;
+
+
+.section_career_01{
+    .content-text{
+      width: 48%;
+      border-radius: 8px;
+      @include mixins.respond-to(2xl) {
+        width: 70%;
+      }
+      h1 span{
+            color: variables.$color-orange-degrade;
+      }
+      h2{
+        font-size: 32px;
+        line-height: 48px;
+        font-weight: 400;
+      }
+      p{
+        padding-right: 19%;
+        font-size: 20px;
+        margin-bottom: 1rem;
+      }
+    }
+}
+
+.section_career_02{
+  text-align: center;
+
+  p.subtitle{
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 2rem;
+  }
+
+  .content-item{
+    display: flex;
+    gap: 1rem;
+    margin-top: 5rem;
+    .item{
+      background-color: variables.$color-blue-bg;
+      padding: 1.8rem 1.5rem;
+      img{
+        margin-bottom: 1rem;
+        &.icon-img-01, &.icon-img-02{
+          padding-top: 22px;
+        }
+      }
+      h3{
+        text-align: left;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+      }
+      p{
+        text-align: left;
+      }
+    }
+  }
+}

@@ -23,18 +23,24 @@ const { lang, content } = Astro.props;
     <img id="binit_gift_02" src="/img/binit-strategy/binit_arrow.gif" title="binit ai gif" class="binit_gift">
   </div>
   <div class="content-item">
-    {content.binit_ai.items.map((item: { title: string; content: string }) => (
-      <div class="item">
-        <h3>{item.title}</h3>
-        <p>{item.content}</p>
-      </div>
+    {content.binit_ai.items.map((item: { title: string; content: string }, index : number) => (
+      <>
+        <div class="item">
+          <h3>{item.title}</h3>
+          <p>{item.content}</p>
+        </div>
+
+        {index < content.binit_ai.items.length - 1 && (
+          <span class="line"></span>
+        )}
+      </>
     ))}
   </div>
 </section>
 
 <section class="section_binit_03">
   <h2 set:html={content.integration_ai.heading}> </h2>
-  <p set:html={content.integration_ai.content}></p>
+  <p set:html={content.integration_ai.content} class="subtitle"></p>
 
   <div class="content-item">
     {content.integration_ai.items.map((item: { icon: string; title: string; content: string }) => (
@@ -48,15 +54,20 @@ const { lang, content } = Astro.props;
 
 <section class="section_binit_04">
   <h2 set:html={content.idea.heading}> </h2>
-  <p set:html={content.idea.content}></p>
+  <p set:html={content.idea.content} class="subtitle"></p>
 
   <img class="carousel-img" src={`/img/binit-strategy/${content.idea.icon}.svg`} alt="linea de tiempo" />
   <a href="/contacto" class="banner__button btn_orange">{content.idea.buttonText}</a>
 </section>
 
 <section class="section_binit_05">
-  <h2 set:html={content.serenity_star.heading}> </h2>
-  <p set:html={content.serenity_star.content}></p>
+  <div class="content">
+    <h2 set:html={content.serenity_star.heading}> </h2>
+    <p set:html={content.serenity_star.content}></p>
 
-  <a href="/contacto" class="banner__button btn_orange">{content.serenity_star.buttonText}</a>
+    <a href="/contacto" class="banner__button btn_orange">{content.serenity_star.buttonText}</a>
+  </div>
+  <div class="content-image">
+    <img class="serenity-img" src={`/img/binit-strategy/img-02.png`} alt="linea de tiempo" />
+  </div>
 </section>

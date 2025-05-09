@@ -4,8 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (slider) {
     //new Splide('#home__carousel').mount();
     new Splide('#home__carousel', {
-      type   : 'loop',
-      padding: { left: 0, right: '20%' },
+      padding: { left: '20%', right: '20%' },
       pagination: false,
     }).mount();
   }  
