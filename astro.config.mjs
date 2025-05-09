@@ -1,5 +1,7 @@
 import { defineConfig } from "astro/config";
+
 export default defineConfig({
-  site: "http://localhost:4321",
+  site: "https://github.com/PiaZaniboni/binit",
+  base: "/binit/",
   outDir: "dist"
 });
