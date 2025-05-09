@@ -1,4 +1,6 @@
 ---
+import { getUrl } from '../../lib/routes';
+
 const { lang, content } = Astro.props;
 ---
 
@@ -7,7 +9,7 @@ const { lang, content } = Astro.props;
     <h1 set:html={content.main_banner.heading}></h1>
     <h2 set:html={content.main_banner.subtitle}></h2>
     <p set:html={content.main_banner.content}></p>
-    <a href="/contacto" class="banner__button btn_orange">{content.main_banner.buttonText}</a>
+    <a href={getUrl('binit_ai_strategy', lang)} class="banner__button btn_orange">{content.main_banner.buttonText}</a>
   </div>
 </section>
 
@@ -44,7 +46,6 @@ const { lang, content } = Astro.props;
     <p set:html={content.how_we_do.intro_1}></p>
     <p set:html={content.how_we_do.intro_2}></p>
   </div>
-  <!-- <img src="/img/home/img-02.png" class="content-img" />-->
 </section>
 
 <section id="servicios" class="section_home_04">
@@ -59,7 +60,7 @@ const { lang, content } = Astro.props;
           </a>
     ))}
   </div>
-  <a href="#" class="btn_orange ">{content.solutions.buttonText}</a>
+  <a href={getUrl('contact', lang)} class="btn_orange ">{content.solutions.buttonText}</a>
 </section>
 
 <section class="section_home_05 brands">
@@ -91,5 +92,5 @@ const { lang, content } = Astro.props;
 <section class="section_home_07">
   <h2 set:html={content.world.heading}></h2>
   <img src={`/img/home/${content.world.icon}.png`} alt="world" />
-  <a href="/contacto" class="banner__button btn_orange">{content.world.buttonText}</a>
+  <a href={getUrl('contact', lang)}  class="banner__button btn_orange">{content.world.buttonText}</a>
 </section>

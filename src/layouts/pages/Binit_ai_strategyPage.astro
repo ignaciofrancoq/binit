@@ -1,4 +1,6 @@
 ---
+import { getUrl } from '../../lib/routes';
+
 const { lang, content } = Astro.props;
 ---
 
@@ -6,7 +8,7 @@ const { lang, content } = Astro.props;
   <div class="banner__content content-text">
     <h1 set:html={content.main_banner.heading}></h1>
     <h2 set:html={content.main_banner.subtitle}></h2>
-    <a href="/contacto" class="banner__button btn_orange">{content.main_banner.buttonText}</a>
+    <a href={getUrl('contact', lang)} class="banner__button btn_orange">{content.main_banner.buttonText}</a>
   </div>
 </section>
 
@@ -57,7 +59,7 @@ const { lang, content } = Astro.props;
   <p set:html={content.idea.content} class="subtitle"></p>
 
   <img class="carousel-img" src={`/img/binit-strategy/${content.idea.icon}.svg`} alt="linea de tiempo" />
-  <a href="/contacto" class="banner__button btn_orange">{content.idea.buttonText}</a>
+  <a href={getUrl('contact', lang)} class="banner__button btn_orange">{content.idea.buttonText}</a>
 </section>
 
 <section class="section_binit_05">
@@ -65,7 +67,7 @@ const { lang, content } = Astro.props;
     <h2 set:html={content.serenity_star.heading}> </h2>
     <p set:html={content.serenity_star.content}></p>
 
-    <a href="/contacto" class="banner__button btn_orange">{content.serenity_star.buttonText}</a>
+    <a href={getUrl('contact', lang)} class="banner__button btn_orange">{content.serenity_star.buttonText}</a>
   </div>
   <div class="content-image">
     <img class="serenity-img" src={`/img/binit-strategy/img-02.png`} alt="linea de tiempo" />
