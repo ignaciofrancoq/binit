@@ -15,15 +15,16 @@ const { lang } = Astro.props;
 
     <slot name="head" />
 
-    <link rel="icon" href="/assets/img/favicon-binit.webp" type="image/webp">
+    <link rel="icon" href={`${Astro.site}/img/favicon-binit.webp`}  type="image/webp">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- Sacar las que no use el disenio al final -->
+
+    <!-- <link rel="stylesheet" href={`${Astro.site}/styles/global.css`} />-->
     <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&display=swap" rel="stylesheet">
 
     <!--Carousel -->
-    <link rel="stylesheet" href="/styles/splide.min.css" />
+    <link rel="stylesheet" href={`${Astro.site}/styles/splide.min.css`} />
   </head>
   <body>
     <Header lang={lang} currentPath={Astro.url.pathname} />
@@ -35,6 +36,6 @@ const { lang } = Astro.props;
 
     <Footer lang={lang} />
   </body>
-  <script src="/js/splide.min.js" is:inline></script>
-  <script src="/js/script.js" is:inline defer></script> <!--Solo cargar en la home? -->
+  <script src={`${Astro.site}/js/splide.min.js`} is:inline></script>
+  <script src={`${Astro.site}/js/script.js`} is:inline defer></script> <!--Solo cargar en la home? -->
 </html>

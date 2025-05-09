@@ -8,17 +8,17 @@ const { lang } = Astro.props as { lang: Lang;  };
     <div class="footer-container">
         <div class="footer-logo">
             <a href="/">
-                <img src="/img/footer/logo-binit.svg" alt="Binit" width="255" height="106"/>
+                <img src={`${Astro.site}/img/footer/logo-binit.svg`}  alt="Binit" width="255" height="106"/>
             </a>
         </div>
   
         <div class="footer-partners">
             <h3>Partners de</h3>
             <ul class="footer__nav-list">
-                <li><img src="/img/footer/microsoft-logo.png" alt="Microsoft Partner" /></li>
-                <li><img src="/img/footer/ibm-logo.png" alt="IBM" /></li>
-                <li><img src="/img/footer/sap-logo.png" alt="SAP" /></li>
-                <li><img src="/img/footer/argentina-texas-logo.png" alt="Argentina Texas" /></li>
+                <li><img src={`${Astro.site}/img/footer/microsoft-logo.png`} alt="Microsoft Partner" /></li>
+                <li><img src={`${Astro.site}/img/footer/ibm-logo.png`} alt="IBM" /></li>
+                <li><img src={`${Astro.site}/img/footer/sap-logo.png`} alt="SAP" /></li>
+                <li><img src={`${Astro.site}/img/footer/argentina-texas-logo.png`} alt="Argentina Texas" /></li>
             </ul>
         </div>
   

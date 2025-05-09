@@ -16,13 +16,13 @@ const { lang, content } = Astro.props;
 <section class="section_binit_02">
   <h2 set:html={content.binit_ai.heading} class="gradient-text"></h2>
   <div class="content-strategy">
-    <img src="/img/binit-strategy/binit_arrow.gif" title="binit ai gif" class="binit_gift">
+    <img src={`${Astro.site}/img/binit-strategy/binit_arrow.gif`} title="binit ai gif" class="binit_gift">
     <div class="content-text">
       <p set:html={content.binit_ai.intro_0}></p>
       <p set:html={content.binit_ai.intro_1}></p>
       <p set:html={content.binit_ai.intro_2}></p>
     </div>
-    <img id="binit_gift_02" src="/img/binit-strategy/binit_arrow.gif" title="binit ai gif" class="binit_gift">
+    <img id="binit_gift_02" src={`${Astro.site}/img/binit-strategy/binit_arrow.gif`} title="binit ai gif" class="binit_gift">
   </div>
   <div class="content-item">
     {content.binit_ai.items.map((item: { title: string; content: string }, index : number) => (
@@ -47,7 +47,7 @@ const { lang, content } = Astro.props;
   <div class="content-item">
     {content.integration_ai.items.map((item: { icon: string; title: string; content: string }) => (
       <div class="item">
-        <h3>{item.title}  <img class="carousel-img" src={`/img/binit-strategy/icons/${item.icon}.svg`} alt={item.title} /></h3>
+        <h3>{item.title}  <img class="carousel-img" src={`${Astro.site}/img/binit-strategy/icons/${item.icon}.svg`} alt={item.title} /></h3>
         <p>{item.content}</p>
       </div>
     ))}
@@ -58,7 +58,7 @@ const { lang, content } = Astro.props;
   <h2 set:html={content.idea.heading}> </h2>
   <p set:html={content.idea.content} class="subtitle"></p>
 
-  <img class="carousel-img" src={`/img/binit-strategy/${content.idea.icon}.svg`} alt="linea de tiempo" />
+  <img class="carousel-img" src={`${Astro.site}/img/binit-strategy/${content.idea.icon}.svg`} alt="linea de tiempo" />
   <a href={getUrl('contact', lang)} class="banner__button btn_orange">{content.idea.buttonText}</a>
 </section>
 
@@ -70,6 +70,6 @@ const { lang, content } = Astro.props;
     <a href={getUrl('contact', lang)} class="banner__button btn_orange">{content.serenity_star.buttonText}</a>
   </div>
   <div class="content-image">
-    <img class="serenity-img" src={`/img/binit-strategy/img-02.png`} alt="linea de tiempo" />
+    <img class="serenity-img" src={`${Astro.site}/img/binit-strategy/img-02.png`} alt="linea de tiempo" />
   </div>
 </section>

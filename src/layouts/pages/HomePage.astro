@@ -28,7 +28,7 @@ const { lang, content } = Astro.props;
         {content.list_carousel.items.map((item: { icon: string; title: string; content: string }) => (
           <li class="splide__slide">
             <div class="box-carousel">
-              <img class="carousel-img" src={`/img/home/carousel/${item.icon}.svg`} alt={item.title} />
+              <img class="carousel-img" src={`${Astro.site}/img/home/carousel/${item.icon}.svg`} alt={item.title} />
               <h3 set:html={item.title}></h3>
               <p set:html={item.content}></p>
             </div>
@@ -54,7 +54,7 @@ const { lang, content } = Astro.props;
     {content.solutions.items.map((item: { icon: string; title: string; link: string }) => (
           <a class="item" href={item.link} title={item.title}>
             <div class="box-img">
-              <img src={`/img/home/solutions/${item.icon}.svg`} alt={item.title} width="107" height="80" />
+              <img src={`${Astro.site}/img/home/solutions/${item.icon}.svg`} alt={item.title} width="107" height="80" />
             </div>
             <span>{item.title}</span>
           </a>
@@ -67,7 +67,7 @@ const { lang, content } = Astro.props;
   <h2 set:html={content.clients.heading}></h2>
   <div class="content-items"> 
     {content.clients.items.map((item: { icon: string; title: string }) => (
-      <img src={`/img/home/clients/${item.icon}.png`} alt={item.title} />
+      <img src={`${Astro.site}/img/home/clients/${item.icon}.png`} alt={item.title} />
     ))}
   </div>
 </section>
@@ -91,6 +91,6 @@ const { lang, content } = Astro.props;
 
 <section class="section_home_07">
   <h2 set:html={content.world.heading}></h2>
-  <img src={`/img/home/${content.world.icon}.png`} alt="world" />
+  <img src={`${Astro.site}/img/home/${content.world.icon}.png`} alt="world" />
   <a href={getUrl('contact', lang)}  class="banner__button btn_orange">{content.world.buttonText}</a>
 </section>

@@ -19,7 +19,7 @@ const otherLangs = Object.entries(languages)
 <header class="site-header">
 <nav class="menu">
   <a href={getUrl('home', lang)} class="logo">
-    <img src="/img/logo.svg" alt="Logo" width="135" height="40" />
+    <img src={`${Astro.site}/img/logo.svg`} alt="Logo" width="135" height="40" />
   </a>
 
   <div class="content-menu">
@@ -40,12 +40,12 @@ const otherLangs = Object.entries(languages)
 
     <ul class="language-switcher">
       <li class="selected">
-        <img src={languages[lang].icon} alt={languages[lang].label} width="24" height="16" />
+        <img src={`${Astro.site}${languages[lang].icon}`} alt={languages[lang].label} width="24" height="16" />
         <span class="language-arrow"></span>
         <ul class="dropdown">
           {otherLangs.map(({ code, url }) => (
             <a href={url}>
-              <img src={languages[code].icon} alt={languages[code].label} width="24" height="16" />
+              <img src={`${Astro.site}${languages[code].icon}`} alt={languages[code].label} width="24" height="16" />
             </a>
             ))}
         </ul>
