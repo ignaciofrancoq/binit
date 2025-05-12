@@ -58,4 +58,21 @@
       }
     }
   }
+
+  .content-join-us{
+    margin-top: 7rem;
+    width: 52%;
+    display: flex;
+    text-align: left;
+    align-items: center;
+    justify-content: flex-start;
+
+    p{
+      margin-left: 3rem;
+
+      a{
+        font-weight: 600;
+      }
+    }
+  }
 }

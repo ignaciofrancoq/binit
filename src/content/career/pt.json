@@ -28,11 +28,11 @@
           "title": "Múltiples industrias​",
           "content": "Trabajamos con empresas líderes de diferentes industrias. Podes desarrollar tu trayectoria profesional en una industria en particular o cambiar de industria dentro de múltiples opciones."
         }
-      ],
-      "join_us": {
+      ]
+    },
+    "join_us": {
         "icon": "icon-plus",
         "content": "Si te interesa formar parte de nuestro equipo podes postularte en las vacantes abiertas que tenemos en <a href='https://www.linkedin.com/company/binit-tech/' title='Binit LinkeIn'>LinkedIn</a> o ponerte en contacto con el equipo de Human Capital enviando un correo electrónico a <strong>busquedas@binit.tech</strong>"
-      }
     }
   }
   
