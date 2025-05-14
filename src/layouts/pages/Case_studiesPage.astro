@@ -1,4 +1,6 @@
 ---
+import { getUrl } from '../../lib/routes';
+
 const { lang, content } = Astro.props;
 ---
 
@@ -9,3 +11,33 @@ const { lang, content } = Astro.props;
   </div>
 </section>
 
+<section id="casos-de-exito" class="section_case_02" >
+  <ul class="tabs">
+    {content.cases.map((caso: { heading: string; hash: string; }) => (
+      <li><a href={`#${caso.hash}`} class="tab-link">{caso.heading}</a></li>
+    ))}
+  </ul>
+
+{content.cases.map((caso: { heading: string; hash: string; items: { logo: string; 'logo-title': string; title: string; content: string; flags: string[]; } []; }) => (
+  <div id={`${caso.hash}`} class="tab-content">
+    <div class={`items grid-items-${caso.items.length}`}>
+      {caso.items.map((item: { logo: string; 'logo-title': string; title: string; content: string; flags: string[]   }) => (
+        <div class="item">
+          <img class="logo" src={`/img/case-studies/logos/${item.logo}.png`} alt={item["logo-title"]} />
+          <h3>{item.title}</h3>
+          <p>{item.content}</p>
+          <div class="flags">
+            {item.flags.map(flag => (
+              <img src={`/img/flags/${flag}.svg`} alt={flag} width="24" />
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+))}
+
+  <div class="box_case_03">
+    <a href={getUrl('contact', lang)} class="btn_case btn_orange">{content.footer_page.buttonText}</a>  
+  </div>
+</section>

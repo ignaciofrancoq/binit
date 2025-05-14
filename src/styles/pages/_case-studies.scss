@@ -21,3 +21,107 @@
       }
     }
 }
+
+.section_case_02{
+  .tabs{
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem;
+    margin: 0 5rem 5rem;
+    li{
+      text-align: center;
+      a {
+        display: block;
+        font-size: 20px;
+        padding: 0.5rem;
+        border: 2px solid variables.$color-blue-dark;
+        text-decoration: none;
+        color: #fff;
+        transition: all 0.2s ease;
+
+        &.active {
+          background-color: variables.$color-blue-dark;
+          border-color: variables.$color-blue-dark;
+        }
+  
+        &:hover {
+          border-color: variables.$color-orange;
+        }
+      }
+    }
+  }
+
+  .tab-content{
+    .items{
+      display: grid;
+      gap: 1rem;
+
+      &.grid-items-1 {
+        grid-template-columns: repeat(1, 1fr);
+        margin: 0 12rem;
+        .item{
+          padding: 3rem 3rem;
+        }
+      }
+    
+      &.grid-items-2 {
+        grid-template-columns: repeat(2, 1fr);
+        .item{
+          padding: 3rem 3rem;
+        }
+      }
+    
+      &.grid-items-3 {
+        grid-template-columns: repeat(3, 1fr);
+        .item{
+          padding: 3rem 2rem;
+        }
+      }
+    
+      @media (max-width: 768px) {
+        &.grid-items-2,
+        &.grid-items-3 {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      .item{
+        background-color: variables.$color-blue-bg;
+        text-align: center;
+        position: relative;
+        img.logo{
+          margin-bottom: 2rem;
+        }
+        h3{
+          text-align: left;
+          font-size: 20px;
+          line-height: 30px;
+          font-weight: 600;
+          border-bottom: 1px solid variables.$color-orange;
+          padding-bottom: 1rem;
+        }
+        p{
+          text-align: left;
+          font-size: 20px;
+          line-height: 40px;
+          margin: 1rem 0;
+        }
+        .flags{
+          text-align: right;
+          position: absolute;
+          right: 12px;
+          bottom: 6px;
+          img{
+            margin-left: 8px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.box_case_03{
+  text-align: center;
+  margin-top: 3rem;
+}

@@ -43,15 +43,15 @@
         "hash": "smart-retail",
         "items": [
           {
-            "logo": "02-smartretail-saporedipane",
-            "logo-title": "Sapore di Pane",
+            "logo": "02-smartretail-comerzzia",
+            "logo-title": "Comerzzia",
             "title": "El complemento perfecto para tu ERP.​",
             "content": "Plataforma diseñada para que los sistemas de tu empresa hagan lo que necesitás de forma ágil, flexible y moderna. Es el complemento ideal porque nos integramos con la tecnología que ya tenés, hacemos que hable un idioma claro y simple, y que escale con nuevas funcionalidades para competir en el mercado.",
             "flags": ["ar"]
           },
           {
-            "logo": "02-smartretail-comerzzia",
-            "logo-title": "Comerzzia",
+            "logo": "02-smartretail-saporedipane",
+            "logo-title": "Sapore di Pane",
             "title": "​AI entrenada para ofrecer soluciones a los retailers.​",
             "content": "Plataforma de análisis digital con IA que pone en valor el Big Data de los procesos de venta para proponer las mejores promociones y cupones para que lo apliquen en los departamentos de Marketing, Comercial o Gerencia. Puede ayudar a aumentar la frecuencia de compra, captar nuevos clientes fidelizados, aumentar el ticket medio, potenciar categorías que no se venden, y premiar la fidelidad.​",
             "flags": ["es"]
@@ -183,6 +183,9 @@
           }
         ]
       }
-    ]
+    ],
+    "footer_page": {
+      "buttonText": "Quiero saber más"
+    }
   }
   
