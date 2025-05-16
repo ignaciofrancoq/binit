@@ -2,8 +2,19 @@
 const { lang, content } = Astro.props;
 ---
 
-<section>
+<section class="section_contact_01">
   <h1>{content.title}</h1>
-  <p>{content.description}</p>
+
+  <div class="chat-container">
+    <div class="chat-body" id="chat-body">
+      <div class="message bot"><img class="" src="/img/smartbot/logo-binit-smartbot.svg" alt="" width="auto" height="50" /> <p>{content.description}</p></div>
+    </div>
+
+    <div class="chat-input">
+      <textarea rows="1" id="chat-text"></textarea>
+      <button id="send-btn"><img src="/img/smartbot/btn-send.svg" width="35" height="auto" /></button>
+    </div>
+  </div>
+  
 
 </section>

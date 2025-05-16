@@ -16,7 +16,7 @@ const { lang, content } = Astro.props;
   <div class="content-item">
     {content.why_work.items.map((item: { icon: string; title: string; content: string }, index: number) => (
       <div class="item">
-        <img class={`icon-img-0${index}`} src={`/img/career/${item.icon}.svg`} alt={item.title} />
+        <img class={`icon-img-0${index}`} src={`/img/career/${item.icon}.svg`} alt={item.title} width="auto" height="75" />
         <h3>{item.title}</h3>
         <p>{item.content}</p>
       </div>

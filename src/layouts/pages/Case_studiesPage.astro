@@ -23,7 +23,7 @@ const { lang, content } = Astro.props;
     <div class={`items grid-items-${caso.items.length}`}>
       {caso.items.map((item: { logo: string; 'logo-title': string; title: string; content: string; flags: string[]   }) => (
         <div class="item">
-          <img class="logo" src={`/img/case-studies/logos/${item.logo}.png`} alt={item["logo-title"]} />
+          <img class="logo" src={`/img/case-studies/logos/${item.logo}.png`} alt={item["logo-title"]} width="auto" height="80"/>
           <h3>{item.title}</h3>
           <p>{item.content}</p>
           <div class="flags">

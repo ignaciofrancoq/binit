@@ -1,0 +1,78 @@
+@use '../base/variables';
+@use '../base/mixins' as mixins;
+
+.section_contact_01{
+    h1{
+        display: none;
+    }
+    margin: 7rem 12rem;
+
+    .chat-container {
+        display: flex;
+        flex-direction: column;
+        height: 80vh;
+        max-height: 80vh;
+        width: 100%;
+
+        .chat-body {
+            flex: 1;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+
+            .message {
+                max-width: 90%;
+                p{
+                    font-size: 16px;
+                    line-height: 24px;
+                }
+                
+
+                &.bot {
+                    display: flex;
+                    align-self: flex-start;
+                    img{
+                        margin-right: 25px;
+                    }
+                }
+
+                &.user {
+                    align-self: flex-end;
+                }
+            }
+        }
+
+        .chat-input {
+            display: flex;
+            gap: 0.5rem;
+            border: 2px solid variables.$color-blue-dark;
+            border-radius: 5px;
+
+            textarea {
+                font-family: variables.$font-family;
+                font-size: 16px;
+                line-height: 24px;
+                color: #fff;
+                flex: 1;
+                resize: none;
+                padding: 0.75rem 0.75rem;
+                border: none;
+                background: none;
+                overflow-y: auto;
+            }
+
+            button {
+                display: flex;
+                align-items: center;
+                background: none;
+                padding: 0;
+                margin: 0.5rem 0.5rem;
+                &:disabled {
+                    cursor: not-allowed;
+                }
+            }
+        }
+    }
+
+}
