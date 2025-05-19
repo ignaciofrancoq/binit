@@ -82,7 +82,7 @@ section{
       width: 30%;
       height: 100%;
       position: absolute;
-      z-index: 99;
+      z-index: 4;
       &.right{
         right: 0;
         background: linear-gradient(to right, transparent, variables.$color-bg);
@@ -158,6 +158,9 @@ section{
       flex: 0 0 calc(100% / 6 - 1rem); 
       max-width: 150px;              
       height: auto;
+      @include mixins.respond-to(lg) {
+        max-width: 120px;
+      }
     }
   }
 }

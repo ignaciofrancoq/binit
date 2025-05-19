@@ -9,6 +9,9 @@ main{
     @include mixins.respond-to(2xl) {
         padding: 0 variables.$padding-page-2xl 1rem;
     }
+    @include mixins.respond-to(lg) {
+        padding: 0 3rem 1rem;
+    }
 
     h1{
         font-size: 64px;
@@ -75,6 +78,9 @@ main{
           margin-left:variables.$padding-page;
           @include mixins.respond-to(2xl) {
             margin-left:variables.$padding-page-2xl;
+          }
+          @include mixins.respond-to(lg) {
+            margin-left: 4rem;
           }
         }
     }

@@ -27,7 +27,7 @@ export async function loadPage(slug: string, lang: string) {
 
   const loader = pages[filePath];
 
-  console.log("path", filePath);
+  //console.log("path", filePath);
 
   if (!loader) {
     throw new Error(`No existe componente para el identificador: ${internalSlug}`);

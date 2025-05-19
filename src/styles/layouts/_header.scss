@@ -12,6 +12,7 @@ header {
   );
   padding: 1rem variables.$padding-page;
   color: white;
+  transition: background-color 200ms;
 
   &.scrolled {
     background-color: variables.$color-primary;
@@ -20,6 +21,9 @@ header {
 
   @include mixins.respond-to(2xl) {
     padding: 1rem variables.$padding-page-2xl;
+  }
+  @include mixins.respond-to(lg) {
+    padding: 1rem 3rem;
   }
 
   nav {
@@ -35,6 +39,9 @@ header {
         li{
           padding: 0 1.5rem;   
           list-style: none;
+          @include mixins.respond-to(lg) {
+            padding: 0 1rem;
+          }
           &.active{
             a{
               font-weight: bold;

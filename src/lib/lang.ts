@@ -40,3 +40,15 @@ export async function getContent(
     throw new Error(`No content for ${lang}/${slug}`);
   }
 }
+
+
+export async function getKeySlug(
+  lang: Lang,
+  slug: string
+): Promise<string | undefined> {
+
+
+  return Object.keys(routes).find(
+    (routeKey) => routes[routeKey][lang] === slug
+  );
+}

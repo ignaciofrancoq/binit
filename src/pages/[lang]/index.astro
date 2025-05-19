@@ -23,7 +23,7 @@ const content = await getContent(lang as Lang, 'home');
 const Page = await loadPage('home', lang);
 ---
 
-<BaseLayout lang={lang}>
+<BaseLayout lang={lang} pageName="home">
   <Fragment slot="head">
     <Seo
       title={content.seo.title }

@@ -4,7 +4,7 @@ import '../styles/global.scss';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 
-const { lang } = Astro.props;
+const { lang, pageName } = Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -25,7 +25,7 @@ const { lang } = Astro.props;
     <!--Carousel -->
     <link rel="stylesheet" href="/styles/splide.min.css" />
   </head>
-  <body>
+  <body class={`page-${pageName}`}>
     <Header lang={lang} currentPath={Astro.url.pathname} />
     <main>
       <div>

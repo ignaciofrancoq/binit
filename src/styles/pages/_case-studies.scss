@@ -1,6 +1,13 @@
 @use '../base/variables';
 @use '../base/mixins' as mixins;
 
+.page-case_studies{
+  & main{
+    @include mixins.respond-to(2xl) {
+        padding: 0 6rem 1rem;
+    }
+  }
+}
 
 .section_case_01{
     .content-text{

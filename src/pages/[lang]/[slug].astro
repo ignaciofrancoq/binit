@@ -3,7 +3,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import Seo from '../../components/Seo.astro';
 
 
-import { getContent } from '../../lib/lang';
+import { getContent, getKeySlug } from '../../lib/lang';
 import { loadPage } from '../../lib/pageLoader';
 import type { Lang } from '../../lib/i18n';
 export { getStaticPaths } from '../../lib/static-paths';
@@ -13,12 +13,14 @@ const { lang, slug } = Astro.params;
 const content = await getContent(lang as Lang, slug);
 
 const Page = await loadPage(slug, lang);
+
+const pageName = await getKeySlug(lang as Lang, slug);
 ---
 
-<BaseLayout lang={lang}>
+<BaseLayout lang={lang} pageName={pageName}>
   <Fragment slot="head">
     <Seo
-      title={content.seo.title }
+      title={content.seo.title}
       description={content.seo.description}
       keywords={content.seo.keywords}
       url={`https://binit.tech/${lang}/${slug}`}

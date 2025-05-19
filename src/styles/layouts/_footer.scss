@@ -11,6 +11,9 @@ footer{
     @include mixins.respond-to(2xl) {
         padding: 6rem variables.$padding-page-2xl 2rem;
     }
+    @include mixins.respond-to(lg) {
+        padding: 6rem 3rem 2rem;
+    }
 
     .footer-container{
         display: flex;
@@ -18,7 +21,11 @@ footer{
         align-content: flex-end;
 
         .footer-logo{
-
+            @include mixins.respond-to(lg) {
+               img{
+                    width: 200px;
+               }
+            }
         }
 
         .footer-partners{
@@ -26,12 +33,18 @@ footer{
                 font-size: 16px;
                 font-weight: 400;
                 margin-bottom: 2rem;
+                @include mixins.respond-to(lg) {
+                    margin-bottom: 1rem;
+                }
             }
             ul{
                 display: flex;
                 list-style: none;
                 li{
                     padding-right: 2rem;
+                    @include mixins.respond-to(lg) {
+                        padding-right: 1.3rem;
+                    }
                 }
             }
         }
