@@ -14,11 +14,19 @@ footer{
     @include mixins.respond-to(lg) {
         padding: 6rem 3rem 2rem;
     }
+    @include mixins.respond-to(md) {
+        padding: 4rem 2rem 2rem;
+    }
 
     .footer-container{
         display: flex;
         justify-content: space-between;
         align-content: flex-end;
+
+        @include mixins.respond-to(md) {
+            flex-direction: column;
+            align-items: center;
+        }
 
         .footer-logo{
             @include mixins.respond-to(lg) {
@@ -29,6 +37,9 @@ footer{
         }
 
         .footer-partners{
+            @include mixins.respond-to(md) {
+                margin: 1rem 0 0rem;
+            }
             h3{
                 font-size: 16px;
                 font-weight: 400;
@@ -36,20 +47,35 @@ footer{
                 @include mixins.respond-to(lg) {
                     margin-bottom: 1rem;
                 }
+                @include mixins.respond-to(md) {
+                    text-align: center;
+                }
             }
             ul{
                 display: flex;
                 list-style: none;
+                @include mixins.respond-to(md) {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    justify-items: center;
+                    gap: 1rem;
+                }
                 li{
                     padding-right: 2rem;
                     @include mixins.respond-to(lg) {
                         padding-right: 1.3rem;
+                    }
+                    @include mixins.respond-to(md) {
+                         padding-right: 0;
                     }
                 }
             }
         }
         .footer-info{
             margin-top: 1.5rem;
+            @include mixins.respond-to(md) {
+                margin-top: 1rem;
+            }
             p{
                 font-size: 16px;
                 line-height: 30px;
@@ -66,6 +92,9 @@ footer{
     .footer-bottom{
         text-align: center;
         margin-top: 4rem;
+        @include mixins.respond-to(md) {
+            margin-top: 2rem;
+        }
         p{
             font-size: 16px;
             line-height: 30px;

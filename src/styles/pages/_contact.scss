@@ -6,6 +6,12 @@
         display: none;
     }
     margin: 7rem 12rem;
+    @include mixins.respond-to(lg) {
+        margin: 7rem 8rem;
+    }
+    @include mixins.respond-to(lg) {
+        margin: 7rem 0;
+    }
 
     .chat-container {
         display: flex;

@@ -12,7 +12,8 @@ header {
   );
   padding: 1rem variables.$padding-page;
   color: white;
-  transition: background-color 200ms;
+  transition: all ease 200ms;
+  overflow: hidden;
 
   &.scrolled {
     background-color: variables.$color-primary;
@@ -26,6 +27,15 @@ header {
     padding: 1rem 3rem;
   }
 
+  @include mixins.respond-to(md) {
+    padding: 1.2rem 1.5rem 1rem;
+    &.open{
+      height: 100vh;
+      background-color: variables.$color-primary !important;
+      z-index: 99999;
+    }
+  }
+
   nav {
     display: flex;
     gap: variables.$spacing-md;
@@ -34,13 +44,25 @@ header {
     .content-menu{
       display: flex;
       align-items: center;
+      @include mixins.respond-to(md) {
+        position: absolute;
+        top: 90px;
+        flex-direction: column;
+        align-items: flex-start;
+      }
       ul.main-menu{
         display: flex;
+        @include mixins.respond-to(md) {
+          flex-direction: column;
+        }
         li{
           padding: 0 1.5rem;   
           list-style: none;
           @include mixins.respond-to(lg) {
             padding: 0 1rem;
+          }
+          @include mixins.respond-to(md) {
+            padding: 0.6rem 0;
           }
           &.active{
             a{
@@ -59,6 +81,10 @@ header {
             &:hover {
               font-weight: bold;
             }            
+            @include mixins.respond-to(md) {
+              font-size: 22px;
+              line-height: 30px;
+            }
           }
         }
       }
@@ -69,6 +95,10 @@ header {
         list-style: none;
         position: relative;
         display: inline-block;
+        @include mixins.respond-to(md) {
+          margin-top: 2rem;
+          margin-left: 0;
+        }
 
         .language-arrow::before {
           content: '';
@@ -80,6 +110,9 @@ header {
           background-repeat: no-repeat;
           background-position: center;
           margin-left: 5px;
+          @include mixins.respond-to(md) {
+            transform: rotate(90deg);
+          }
         }
       
         .dropdown {
@@ -91,6 +124,9 @@ header {
           left: -0.5rem;
           background-color: variables.$color-primary;
           padding: 0 0.5rem 0.5rem;
+          @include mixins.respond-to(md) {
+            display: block;
+          }
         }
       
         &:hover .dropdown {
@@ -104,6 +140,50 @@ header {
           display: block;
         }
       }     
+    }
+
+    //Btn menu mobile
+    .btn-menu-mobile{
+      width: 30px;
+      height: 24px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border: none;
+      background: none;
+      cursor: pointer;
+      padding: 0;
+      z-index: 1000;
+
+      @include mixins.respond-to(md) {
+        display: block !important;
+      }
+
+      span {
+        display: block;
+        height: 2px;
+        margin-bottom: 5px;
+        width: 100%;
+        background: #fff;
+        border-radius: 3px;
+        transition: all 0.3s ease;
+        transform-origin: center;
+      }
+
+      &.open {
+        span:nth-child(1) {
+          transform: rotate(45deg) translate(5px, 5px);
+        }
+
+        span:nth-child(2) {
+          opacity: 0;
+        }
+
+        span:nth-child(3) {
+          transform: rotate(-45deg) translate(5px, -5px);
+        }
+      }
     }
   }
 }

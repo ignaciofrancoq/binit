@@ -8,6 +8,16 @@ window.addEventListener('scroll', () => {
     }
 });
 
+//Btn menu mobile
+document.querySelector('.btn-menu-mobile').addEventListener('click', function () {
+  this.classList.toggle('open');
+  
+  const header = this.closest('header');
+  if (header) {
+    header.classList.toggle('open');
+  }
+});
+
 //Carousel home
 document.addEventListener('DOMContentLoaded', () => {
   const slider = document.querySelector('#home__carousel');

@@ -1,10 +1,6 @@
 @use '../base/variables';
 @use '../base/mixins' as mixins;
 
-section{
-  margin: 7rem 0;
-}
-
 .section_home_01{
   .content-text{
     width: 38%;
@@ -13,15 +9,34 @@ section{
     @include mixins.respond-to(2xl) {
       width: 70%;
     }
+    @include mixins.respond-to(sm) {
+      h1{
+        margin-bottom: 0.6rem;
+      }
+    }
     h2{
       font-size: 32px;
       line-height: 48px;
       font-weight: 400;
+      @include mixins.respond-to(lg) {
+        font-size: 28px;
+        line-height: 42px;
+      }
+      @include mixins.respond-to(sm) {
+        font-size: 24px;
+        line-height: 32px;
+        margin-bottom: 0.6rem;
+      }
     }
     p{
       padding-right: 19%;
       font-size: 20px;
       margin-bottom: 1rem;
+      @include mixins.respond-to(sm) {
+        padding-right: 0;
+        font-size: 18px;
+        margin-bottom: 0.6rem;
+      }
     }
   }
 }
@@ -31,15 +46,32 @@ section{
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  @include mixins.respond-to(md) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
   .content-text{
     width: 50%;
     max-width: 50%;
+    @include mixins.respond-to(md) {
+      width: 100%;
+      max-width: 100%;
+      margin-bottom: 1.5rem;
+    }
     p{
       margin: 1.5rem 0;
+      @include mixins.respond-to(md) {
+        margin: 1rem 0;
+      }
     }
   }
   #home__carousel{
     width: 40%;
+    @include mixins.respond-to(md) {
+      width: 100%;
+      margin-bottom: 5rem;
+    }
     .splide__slide{
       margin: 0 1rem;  
 
@@ -99,8 +131,17 @@ section{
   background-repeat: no-repeat;
   background-position: right;
   display: flex;
+  @include mixins.respond-to(md) {
+    background: none !important;
+  }
   .content-text{
     width: 50%;
+    @include mixins.respond-to(lg) {
+      width: 65%;
+    }
+    @include mixins.respond-to(md) {
+      width: 100%;
+    }
     p{
       font-size: 18px;
       margin: 1rem 0;
@@ -115,6 +156,17 @@ section{
     grid-template-columns: repeat(5, 1fr);
     gap: 2rem 1rem;
     margin: 4rem 0;
+    @include mixins.respond-to(lg) {
+      margin: 3rem 0;
+    }
+    @include mixins.respond-to(md) {
+      grid-template-columns: repeat(3, 1fr);
+      margin: 2rem 0;
+      gap: 1rem 1rem;
+    }
+    @include mixins.respond-to(sm) {
+      grid-template-columns: repeat(2, 1fr);
+    }
     .item{
       display: flex;
       flex-direction: column;
@@ -125,10 +177,16 @@ section{
         border: 2px solid variables.$color-blue-dark;
         padding: 0.8rem 1rem;
         margin-bottom: 1rem;
+        @include mixins.respond-to(md) {
+          margin-bottom: 0.6rem;
+        }
       }
       span{
         font-size: 20px;
-        font-weight: 300;
+        font-weight: 400;
+        @include mixins.respond-to(md) {
+          font-size: 18px;
+        }
       }
       &:hover{
         .box-img{
@@ -147,6 +205,11 @@ section{
 
   h2{
     margin-bottom: 2rem;
+    @include mixins.respond-to(md) {
+      br{
+        display: none;
+      }
+    }
   }
 
   .content-items{
@@ -154,12 +217,18 @@ section{
     flex-wrap: wrap;
     justify-content: center;
     gap: 2rem 4rem;
+    @include mixins.respond-to(md) {
+      gap: 1.5rem 1.5rem;
+    }
     img {
       flex: 0 0 calc(100% / 6 - 1rem); 
       max-width: 150px;              
       height: auto;
       @include mixins.respond-to(lg) {
         max-width: 120px;
+      }
+      @include mixins.respond-to(md) {
+        max-width: 130px;
       }
     }
   }
@@ -171,7 +240,11 @@ section{
   .headline .title{
     font-size: 96px;
     height: 96px;
-    font-weight: 600;
+    font-weight: 700;
+    @include mixins.respond-to(sm) {
+      font-size: 55px;
+      height: 55px;
+    }
   }
 
   /*Animacion*/
@@ -180,6 +253,9 @@ section{
     overflow: hidden;
     position: relative;
     display: inline-block;
+    @include mixins.respond-to(sm) {
+      height: 55px;
+    }
   }
   
   .words {
@@ -190,10 +266,15 @@ section{
   
   .words span {
     font-size: 96px;
-    font-weight: 600;
+    font-weight: 700;
     height: 96px;
     line-height: 96px;
     text-align: left;
+    @include mixins.respond-to(sm) {
+      font-size: 55px;
+      line-height: 68px;
+      height: 55px;
+    }
   }
   
   @keyframes vertical-loop {
@@ -202,13 +283,25 @@ section{
     60%, 70% { transform: translateY(-192px); }
     90%, 100% { transform: translateY(-288px); }
   }
+  @include mixins.respond-to(sm) {
+    @keyframes vertical-loop {
+      0%, 10% { transform: translateY(0); }
+      30%, 40% { transform: translateY(-55px); }
+      60%, 70% { transform: translateY(-110px); }
+      90%, 100% { transform: translateY(-165px); }
+    }
+  }
   /*Animacion end*/
 
   p{
     width: 60%;
     font-size: 20px;
     line-height: 30px;
-    font-weight: 300;
+    font-weight: 400;
+    @include mixins.respond-to(md) {
+      margin-top: 1rem;
+      width: 100%;
+    }
   }
 }
 
@@ -217,5 +310,11 @@ section{
   img{
     width: 100%;
     margin: 0 auto;
+    @include mixins.respond-to(lg) {
+      width: 90%;
+    }
+    @include mixins.respond-to(md) {
+      width: 100%;
+    }
   }
 }

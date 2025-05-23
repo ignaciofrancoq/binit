@@ -12,6 +12,10 @@
         font-size: 32px;
         line-height: 48px;
         font-weight: 400;
+        @include mixins.respond-to(lg) {
+          font-size: 28px;
+          line-height: 42px;
+        }
       }
       p{
         padding-right: 19%;
@@ -29,7 +33,28 @@
       line-height: 124px;
       font-weight: 700;
       margin-bottom: 4rem;
+      @include mixins.respond-to(lg) {
+        font-size: 85px;
+        line-height: 100px;
+        margin-bottom: 3rem;
+      }
+      @include mixins.respond-to(sm) {
+        font-size: 75px;
+        line-height: 90px;
+        margin-bottom: 2rem;
+      }
     }
+
+    .binit_gift{
+      @include mixins.respond-to(lg) {
+       width: 45%;
+      }
+      @include mixins.respond-to(sm) {
+        display: none;
+      }
+    }
+
+    
 
     #binit_gift_02{
       transform: rotate(180deg);
@@ -41,22 +66,39 @@
       align-items: center;
       justify-content: space-between;
       margin-bottom: 7rem;
+      @include mixins.respond-to(md) {
+        margin-bottom: 4rem;
+      }
 
       .content-text{
         display: flex;
         flex-direction: column;
         text-align: left;
         padding: 0 5rem;
+        @include mixins.respond-to(lg) {
+          padding: 0 2rem;
+        }
+        @include mixins.respond-to(sm) {
+          padding: 0 0;
+        }
         p{
           font-size: 20px;
           line-height: 32px;
           margin: 0.6rem 0;
+          @include mixins.respond-to(lg) {
+            font-size: 18px;
+            line-height: 30px;
+            margin: 0.4rem 0;
+          }
         }
       }
     }
     .content-item{
       display: flex;
       flex-wrap: nowrap;
+      @include mixins.respond-to(md) {
+        flex-direction: column;
+      }
       .item{
         text-align: left;
         h3{
@@ -67,6 +109,11 @@
         width: 6px;
         background: variables.$color-blue-line;
         margin: 0 2rem;
+        @include mixins.respond-to(sm) {
+          width: 100%;
+          height: 2px;
+          margin: 1.5rem 0;
+        }
       }
     }
   }
@@ -78,6 +125,10 @@
       width: 60%;
       margin: 0 auto;
       margin-top: 2rem;
+      @include mixins.respond-to(md) {
+        margin-top: 1.5rem;
+        width: 100%;
+      }
     }
     .content-item{
       display: flex;
@@ -85,6 +136,9 @@
       justify-content: center;
       gap: 1rem 1rem;
       margin-top: 4rem;
+      @include mixins.respond-to(md) {
+        margin-top: 2.5rem;
+      }
       .item{
         width: 410px;
         border: 2px solid variables.$color-blue-line;
@@ -97,12 +151,28 @@
           font-weight: 600;
           padding: 0.6rem 0.3rem;
           border-bottom: 2px solid variables.$color-blue-line;
+          @include mixins.respond-to(md) {
+            padding: 0.6rem 0.6rem;
+          }
+          @include mixins.respond-to(sm) {
+            img{
+              height: 30px;
+              width: auto;
+            }
+          }
         }
         p{
           font-size: 20px;
           line-height: 32px;
           padding: 1.5rem 1.8rem;
           text-align: left;
+          @include mixins.respond-to(lg) {
+            font-size: 18px;
+            line-height: 28px;
+          }
+          @include mixins.respond-to(md) {
+            padding: 1.5rem 1rem;
+          }
         }
       }
     }
@@ -111,10 +181,22 @@
   .section_binit_04{
     text-align: center;
 
+    @include mixins.respond-to(md) {
+      h2{
+        br{
+          display: none;
+        }
+      }
+    }
+
     p.subtitle{
       width: 66%;
       margin: 0 auto;
       margin-top: 2rem;
+      @include mixins.respond-to(md) {
+        width: 100%;
+        margin-top: 1.2rem;
+      }
     }
 
     .carousel-img{
@@ -127,15 +209,30 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
+    @include mixins.respond-to(md) {
+      flex-direction: column-reverse;
+    }
   
     .content {
       flex: 1 1 50%;
       max-width: 50%;
+      @include mixins.respond-to(lg) {
+        flex: 1 1 60%;
+        max-width: 60%;
+      }
+      @include mixins.respond-to(md) {
+        flex: 1 1 100%;
+        max-width: 100%;
+        text-align: center;
+      }
       h2 span{
         color: variables.$color-blue-degrade;
       }
       p{
         margin: 1.8rem 0 1.5rem;
+        @include mixins.respond-to(md) {
+           margin: 1.5rem 0 1.5rem;
+        }
       }
     }
   
@@ -143,6 +240,14 @@
       flex: 1 1 50%;
       max-width: 50%;
       text-align: center;
+      @include mixins.respond-to(lg) {
+        flex: 1 1 40%;
+        max-width: 40%;
+      }
+      @include mixins.respond-to(md) {
+        flex: 1 1 100%;
+        max-width: 100%;
+      }
   
       img.serenity-img {
         max-width: 100%;

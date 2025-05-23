@@ -12,26 +12,57 @@ main{
     @include mixins.respond-to(lg) {
         padding: 0 3rem 1rem;
     }
+    @include mixins.respond-to(md) {
+        padding: 0 1.5rem 1rem;
+    }
 
     h1{
         font-size: 64px;
         line-height: 76px;
-        font-weight: 600;
+        font-weight: 700;
         margin-bottom: 1rem;
+        @include mixins.respond-to(lg) {
+            font-size: 50px;
+            line-height: 66px;
+        }
+        @include mixins.respond-to(sm) {
+            font-size: 40px;
+            line-height: 44px;
+        }
     }
 
     h2{
         font-size: 40px;
         line-height: 62px;
-        font-weight: 600;
+        font-weight: 700;
         margin-bottom: 1rem;
+        @include mixins.respond-to(lg) {
+            font-size: 34px;
+            line-height: 48px;
+        }
+        @include mixins.respond-to(md) {
+            font-size: 30px;
+            line-height: 42px;
+        }
+        @include mixins.respond-to(sm) {
+            font-size: 24px;
+            line-height: 34px;
+        }
     }
     p{
         font-size: 20px;
         line-height: 30px;
-        font-weight: 300;
+        font-weight: 400;
         strong{
-            font-weight: 600;
+            font-weight: 700;
+        }
+        @include mixins.respond-to(lg) {
+            font-size: 18px;
+            line-height: 28px;
+        }
+        @include mixins.respond-to(sm) {
+            font-size: 18px;
+            line-height: 28px;
         }
     }
 
@@ -44,6 +75,10 @@ main{
         text-decoration: none;
         font-size: 24px;
         font-weight: 600;
+        @include mixins.respond-to(lg) {
+            font-size: 20px;
+            line-height: 24px;
+        }
         &:hover {
             filter: brightness(1.2);
             box-shadow: 0 0 20px rgba(0, 123, 255, 0.8);
@@ -74,6 +109,9 @@ main{
         @include mixins.respond-to(2xl) {
             height: 100vh;
         }
+        @include mixins.respond-to(sm) {
+            height: 85vh;
+        }
         .banner__content{
           margin-left:variables.$padding-page;
           @include mixins.respond-to(2xl) {
@@ -82,7 +120,27 @@ main{
           @include mixins.respond-to(lg) {
             margin-left: 4rem;
           }
+          @include mixins.respond-to(md) {
+            width: 100%;
+            margin-left: 1.5rem;
+            padding: 1.5rem 1rem 0 0;
+          }
+          @include mixins.respond-to(sm) {
+            br{
+                display: none;
+            }
+          }
         }
+    }
+}
+
+section{
+    margin: 7rem 0;
+    @include mixins.respond-to(lg) {
+        margin: 5rem 0;
+    }
+    @include mixins.respond-to(md) {
+        margin: 3rem 0;
     }
 }
 
