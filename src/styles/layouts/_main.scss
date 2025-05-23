@@ -20,6 +20,9 @@ main{
     padding: 0 variables.$padding-page 1rem;
     color: white;
     min-height: 100vh;
+    @include mixins.respond-to(3xl) {
+        padding: 0 15rem 1rem;
+    }
     @include mixins.respond-to(2xl) {
         padding: 0 variables.$padding-page-2xl 1rem;
     }

@@ -25,8 +25,20 @@ document.addEventListener('DOMContentLoaded', () => {
   if (slider) {
     //new Splide('#home__carousel').mount();
     new Splide('#home__carousel', {
-      padding: { left: '20%', right: '20%' },
+      type: 'loop',
+      focus: 'center',
+      perPage: 1,
+      gap: '1rem',
+      padding: { left: '25%', right: '25%' },
       pagination: false,
+      breakpoints: {
+        1500: {
+          padding: { left: '20%', right: '20%' },
+        },
+        1100: {
+          padding: { left: 0, right: 0 },
+        },
+      },
     }).mount();
   }  
 });

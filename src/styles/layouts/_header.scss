@@ -20,6 +20,9 @@ header {
     backdrop-filter: blur(8px); // opcional: para efecto glass
   }
 
+  @include mixins.respond-to(3xl) {
+    padding: 1rem 15rem;
+  }
   @include mixins.respond-to(2xl) {
     padding: 1rem variables.$padding-page-2xl;
   }

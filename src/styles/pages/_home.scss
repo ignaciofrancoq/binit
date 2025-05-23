@@ -74,13 +74,17 @@
     }
   }
   #home__carousel{
-    width: 40%;
+    width: 45%;
     @include mixins.respond-to(md) {
       width: 100%;
-      margin-bottom: 5rem;
+      margin-bottom: 3rem;
     }
+
+    
     .splide__slide{
-      margin: 0 1rem;  
+      @include mixins.respond-to(md, min) {
+        margin: 0 1.5rem;  
+      }
 
       &.is-active{
       }
@@ -89,25 +93,35 @@
         height: 100%;
         border: 2px solid variables.$color-blue-line;
         background-color: #061E46;
-        padding: 1.5rem 2rem;
+        padding: 1.5rem 1.8rem;
         border-radius: 23px;
         .carousel-img{
           margin-bottom: 1rem;
         }
         h3{
           font-size: 18px;
-          line-height: 30px;
-          margin-bottom: 0.8rem;
+          line-height: 25px;
+          margin-bottom: 0.6rem;
         }
         p{
           font-size: 18px;
+          line-height: 28px;
         }
       }
+    }
+    
+    .splide__track{
+      padding-bottom: 2.5rem;
     }
     .splide__arrows{
       position: absolute;
       bottom: -40px;
-      left: 28%;
+      left: 50%;
+      transform: translateY(-50%);
+      @include mixins.respond-to(lg) {
+        bottom: -5px;
+        left:33%;
+      }
       .splide__arrow--prev{
         right: 1rem;
         left: 0;
@@ -130,7 +144,51 @@
         left: 0;
         background: linear-gradient(to left, transparent, variables.$color-bg);
       }
+      @include mixins.respond-to(lg) {
+        display: none;
+      }
     }
+    .splide {
+      width: 100%;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    @include mixins.respond-to(md, min) {
+      .splide__slide {
+        transform: translateY(40px);
+        opacity: 0.6;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+      }
+
+      .splide__slide.is-active {
+        transform: translateY(0);
+        opacity: 1;
+        z-index: 2;
+      }
+    }
+
+    .splide__arrow {
+      background: none;
+      border: none;
+      width: 40px;
+      height: 40px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 32px;
+      svg{
+        display: none;
+      }
+    }
+
+    .splide__arrow--prev {
+      background-image: url('/img/home/carousel/arrow-prev.svg');
+    }
+
+    .splide__arrow--next {
+      background-image: url('/img/home/carousel/arrow-next.svg');
+    }
+
   }
 }
 
