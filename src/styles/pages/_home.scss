@@ -41,6 +41,13 @@
   }
 }
 
+@include mixins.respond-to(md) {
+  .section_home_01.banner_main{
+    background-image: url('/img/home/img-01-mobile.jpg') !important;
+    background-position: center bottom;
+  }
+}
+
 .section_home_02{
   display: flex;
   flex-direction: row;

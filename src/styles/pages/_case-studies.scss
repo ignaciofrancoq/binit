@@ -35,6 +35,13 @@
     }
 }
 
+@include mixins.respond-to(md) {
+  .section_case_01.banner_main{
+    background-image: url('/img/case-studies/img-01-mobile.jpg') !important;
+    background-position: center bottom;
+  }
+}
+
 .section_case_02{
   .tabs{
     list-style: none;
@@ -113,11 +120,12 @@
         }
       }
     
-      @media (max-width: 768px) {
+      @include mixins.respond-to(md) {
         &.grid-items-1,
         &.grid-items-2,
         &.grid-items-3 {
           grid-template-columns: 1fr;
+          margin: 0;
         }
       }
 
@@ -127,6 +135,10 @@
         position: relative;
         img.logo{
           margin-bottom: 2rem;
+          @include mixins.respond-to(md) {
+            max-width: 100%;
+            height: auto;
+          }
         }
         h3{
           text-align: left;

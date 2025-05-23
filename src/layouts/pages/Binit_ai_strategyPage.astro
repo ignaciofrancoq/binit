@@ -58,7 +58,8 @@ const { lang, content } = Astro.props;
   <h2 set:html={content.idea.heading}> </h2>
   <p set:html={content.idea.content} class="subtitle"></p>
 
-  <img class="carousel-img" src={`/img/binit-strategy/${content.idea.icon}.svg`} alt="linea de tiempo" />
+  <img class="carousel-img hide-mobile" src={`/img/binit-strategy/${content.idea.icon}.svg`} alt="linea de tiempo" />
+  <img class="carousel-img show-mobile" src={`/img/binit-strategy/${content.idea.icon}_mobile.svg`} alt="linea de tiempo" />
   <a href={getUrl('contact', lang)} class="banner__button btn_orange">{content.idea.buttonText}</a>
 </section>
 

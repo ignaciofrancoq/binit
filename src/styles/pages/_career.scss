@@ -26,6 +26,13 @@
     }
 }
 
+@include mixins.respond-to(md) {
+  .section_career_01.banner_main{
+    background-image: url('/img/career/img-01-mobile.jpg') !important;
+    background-position: center bottom;
+  }
+}
+
 .section_career_02{
   text-align: center;
 
