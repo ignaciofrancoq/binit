@@ -5,6 +5,8 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 
 const { lang, pageName } = Astro.props;
+const apiKey = import.meta.env.PUBLIC_CHATBOT_API_KEY;
+const agentCode = import.meta.env.PUBLIC_CHATBOT_AGENT_CODE;
 ---
 
 <!DOCTYPE html>
@@ -19,11 +21,15 @@ const { lang, pageName } = Astro.props;
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- Sacar las que no use el disenio al final -->
+
+    {/* Sacar las que no use el disenio al final */}
     <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&display=swap" rel="stylesheet">
 
-    <!--Carousel -->
+    {/* Carousel */}
     <link rel="stylesheet" href="/styles/splide.min.css" />
+
+    {/* ChatBot */}
+    <link rel="stylesheet" href="https://hub.serenitystar.ai/resources/chat.css" />
   </head>
   <body class={`page-${pageName}`}>
     <Header lang={lang} currentPath={Astro.url.pathname} />
@@ -33,8 +39,49 @@ const { lang, pageName } = Astro.props;
       </div>
     </main>
 
+    <div id="aihub-chat" data-api-key={apiKey} data-agent-code={agentCode}></div>
     <Footer lang={lang} />
   </body>
   <script src="/js/splide.min.js" is:inline></script>
-  <script src="/js/script.js" is:inline defer></script> <!--Solo cargar en la home? -->
+  <script src="/js/script.js" is:inline defer></script>
+
+
+  {/* Chat bot */}
+  <script src="https://hub.serenitystar.ai/resources/chat.js"></script>
+  <script>
+	document.addEventListener("DOMContentLoaded", function () {
+    const el = document.getElementById("aihub-chat");
+    const apiKey = el.dataset.apiKey;
+    const agentCode = el.dataset.agentCode;
+
+		const chat = new AIHubChat("aihub-chat", {
+			apiKey: apiKey,
+			agentCode: agentCode,
+			baseURL: "https://api.serenitystar.ai/api",
+      locale: { 
+        headerTitle: "Binit Smartbot",
+      },
+      theme: {
+        header: {
+            bgColor: "#005BBF",
+            textColor: "#FFFFFF",
+        },
+        fabButton: {
+          bgColor: "#123C81",
+        },
+        messageBubble: {
+          user: {
+            bgColor: "#123C81",
+            textColor: "#fff",
+          },
+          assistant: {
+            bgColor: "#123C81",
+            textColor: "#fff",
+          },
+        },
+    }
+		});
+		chat.init();
+	});
+</script>
 </html>

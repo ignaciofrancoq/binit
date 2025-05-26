@@ -17,7 +17,6 @@ export async function getStaticPaths() {
 
 const { lang } = Astro.params;
 
-// si querés podés traer contenido dinámico para home también
 const content = await getContent(lang as Lang, 'home');
 
 const Page = await loadPage('home', lang);

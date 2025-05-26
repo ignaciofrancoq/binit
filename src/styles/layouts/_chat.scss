@@ -1,4 +1,31 @@
+@use '../base/variables';
+
 #aihub-chat{
+    .Chat_container__x4T-U{
+        border: 2px solid variables.$color-blue-line;
+        background-color: variables.$color-blue-line;
+        border-radius: 0 !important;
+    }
+
+    .Body_scroll__NDD8U, .Body_chatBody__UPff6, .MessageBox_messageUser__Mhk7s:after,
+    .Body_imessage__pSr2y div:after, .Body_imessage__pSr2y div:before{
+        background-color: variables.$color-blue-bg !important;
+    }
+
+    .ConversationStarters_initialMessageContainer__Ou--S{
+        background-color: variables.$color-blue-dark !important;
+        p{
+            color: #fff;
+        }
+    }
+
+    .Footer_container__R7sXj{
+        background-color: variables.$color-blue-bg !important;
+        border-top: 2px solid variables.$color-blue-line !important;
+    }
+    .Footer_poweredByContainer__2wZt2 a{
+        color: #fff;
+    }
 
     .FabButton_container__kEpYH{
         background-image: url('/img/smartbot/icon-chatbot.svg');
@@ -9,7 +36,45 @@
         }
     }
 
-    .Header_headerOpened__IV0A2 img{
-        display: none;
+    .Footer_inputWrapper__PbqdQ{
+        textarea{
+            font-family: variables.$font-family;
+            font-weight: 400;
+            background-color: variables.$color-blue-dark !important;
+            border: 1px solid variables.$color-blue-line !important;
+            border-radius: 0 !important;
+            color: #fff !important;
+            &::placeholder {
+                font-family: variables.$font-family;
+                font-weight: 400;
+                color: #e4e2e2 !important;
+                opacity: 1; 
+            }
+        }
+    }
+
+    .Header_headerOpened__IV0A2{
+        img{
+            display: none;
+        }
+    }
+    #Header_resetChatBtn__7ukQR{
+        background-color: variables.$color-orange !important;
+        color: #fff !important;
+        font-weight: bold;
+        border-radius: 0 !important;
+    }
+    .Footer_primaryButton__HDarq{
+        background-image: url('/img/smartbot/btn-send.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 38px;
+        height: 38px;
+        background-color: transparent !important;
+        border-radius: 0;
+        border: 1px solid variables.$color-blue-line !important;
+        svg{
+            display: none;
+        }   
     }
 }

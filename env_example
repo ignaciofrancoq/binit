@@ -1,0 +1,6 @@
+#Cambiarle el nombre por .env
+
+# API Key del chatbot
+PUBLIC_CHATBOT_API_KEY=your-api-key-here
+# Codigo del agente asignado al chatbot
+PUBLIC_CHATBOT_AGENT_CODE=your-agent-code-here

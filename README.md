@@ -38,6 +38,16 @@ Ejecuta el siguiente comando para instalar las dependencias del proyecto:
 ```bash
 npm install
 ```
+### 4. Configuración del archivo .env
+
+Este proyecto utiliza variables de entorno para conectar con el chatbot de Serenity Star. Para que funcione correctamente, necesitás crear un archivo .env en la raíz del proyecto con el siguiente contenido:
+
+```bash
+PUBLIC_CHATBOT_API_KEY=####
+PUBLIC_CHATBOT_AGENT_CODE=####
+```
+
+Podes cambiarle el nombre al archivo de ejemplo env_example
 
 ## Desarrollo
 
