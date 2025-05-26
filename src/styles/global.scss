@@ -5,6 +5,7 @@
 @use 'layouts/header';
 @use 'layouts/main';
 @use 'layouts/footer';
+@use 'layouts/chat.scss';
 
 @use 'components/button';
 
@@ -13,3 +14,4 @@
 @use 'pages/case-studies';
 @use 'pages/career';
 @use 'pages/contact';
+

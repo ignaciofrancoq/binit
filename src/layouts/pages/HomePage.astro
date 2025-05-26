@@ -91,6 +91,7 @@ const { lang, content } = Astro.props;
 
 <section class="section_home_07">
   <h2 set:html={content.world.heading}></h2>
-  <img src={`/img/home/${content.world.icon}.png`} alt="world" />
+  <img class="hide-mobile" src={`/img/home/${content.world.icon}.png`} alt="world" />
+  <img class="show-mobile" src={`/img/home/${content.world.icon}-mobile.svg`} alt="world" />
   <a href={getUrl('contact', lang)}  class="banner__button btn_orange">{content.world.buttonText}</a>
 </section>
