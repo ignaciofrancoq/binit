@@ -28,7 +28,7 @@ const otherLangs = Object.entries(languages)
         if (index === 0) return null; // Saltar el primer ítem (home/logo)
 
         const href = getUrl(routeKey, lang);
-        const isActive = currentPath === href || currentPath === href?.split('#')[0];
+        const isActive = currentPath === href; //|| currentPath === href?.split('#')[0];
 
         return (
           <li class={isActive ? 'active' : ''}>
