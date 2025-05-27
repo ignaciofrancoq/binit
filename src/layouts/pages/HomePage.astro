@@ -1,5 +1,5 @@
 ---
-import { getUrl } from '../../lib/routes';
+import { getUrl, getAnchor } from '../../lib/routes';
 
 const { lang, content } = Astro.props;
 ---
@@ -48,7 +48,7 @@ const { lang, content } = Astro.props;
   </div>
 </section>
 
-<section id="servicios" class="section_home_04">
+<section id={getAnchor('services', lang)}  class="section_home_04">
   <h2 set:html={content.solutions.heading}></h2>
   <div class="content-items"> 
     {content.solutions.items.map((item: { icon: string; title: string; link: string }) => (
@@ -72,7 +72,7 @@ const { lang, content } = Astro.props;
   </div>
 </section>
 
-<section id="nosotros" class="section_home_06 banner_main" style="background-image: url('/img/home/img-03.png');">
+<section id={getAnchor('about-us', lang)} class="section_home_06 banner_main" style="background-image: url('/img/home/img-03.png');">
   <div class="banner__content">
     <div class="headline">
       <span class="title">{content.we_are.heading}</span>

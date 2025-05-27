@@ -13,7 +13,9 @@ header {
   padding: 1rem variables.$padding-page;
   color: white;
   transition: all ease 200ms;
-  overflow: hidden;
+  @include mixins.respond-to(md) {
+    overflow: hidden;
+  }
 
   &.scrolled {
     background-color: variables.$color-primary;

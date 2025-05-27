@@ -55,3 +55,11 @@ export function getUrl(routeKey: string, lang: Lang): string {
   }
   return '/'; // fallback
 }
+
+export function getAnchor(routeKey: string, lang: Lang): string {
+  if (routeKey in anchors) {
+    const anchor = anchors[routeKey][lang];
+    return `${anchor}`;
+  }
+  return '/'; // fallback
+}
