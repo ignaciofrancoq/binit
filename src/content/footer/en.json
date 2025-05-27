@@ -1,0 +1,42 @@
+{
+    "partners": {
+      "heading": "Partners of",
+      "items": [
+        {
+          "icon": "microsoft-logo",
+          "title": "Microsoft Partner"        
+        },
+        {
+          "icon": "ibm-logo",
+          "title": "IBM"
+        },
+        {
+          "icon": "sap-logo",
+          "title": "SAP"
+        },
+        {
+          "icon": "argentina-texas-logo",
+          "title": "Argentina Texas"
+        }
+      ]
+    },
+    "text_bottom":{
+      "binit": "Binit es una empresa del grupo ",
+      "binit_derechos": "© 2025 BINIT. Reservados todos los derechos |",
+      "items": [
+        {
+          "link": "#",
+          "title": "Política de Privacidad"        
+        },
+        {
+          "link": "#",
+          "title": "Política de Cookies"        
+        },
+        {
+          "link": "#",
+          "title": "Aviso Legal"        
+        }
+      ]
+    }
+  }
+  

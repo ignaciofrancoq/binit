@@ -1,7 +1,9 @@
 ---
 import { languages, type Lang } from '../lib/i18n';
+import { getContent } from '../lib/lang';
 
 const { lang } = Astro.props as { lang: Lang;  };
+const content = await getContent(lang as Lang, 'footer');
 ---
 
 <footer class="footer">
@@ -13,12 +15,11 @@ const { lang } = Astro.props as { lang: Lang;  };
         </div>
   
         <div class="footer-partners">
-            <h3>Partners de</h3>
+            <h3>{content.partners.heading}</h3>
             <ul class="footer__nav-list">
-                <li><img src="/img/footer/microsoft-logo.png" alt="Microsoft Partner" /></li>
-                <li><img src="/img/footer/ibm-logo.png" alt="IBM" /></li>
-                <li><img src="/img/footer/sap-logo.png" alt="SAP" /></li>
-                <li><img src="/img/footer/argentina-texas-logo.png" alt="Argentina Texas" /></li>
+                {content.partners.items.map((item: { icon: string; title: string}) => (
+                    <li><img src={`/img/footer/${item.icon}.png`}   alt={item.title} /></li>
+                ))}
             </ul>
         </div>
   
@@ -32,10 +33,13 @@ const { lang } = Astro.props as { lang: Lang;  };
     </div>
   
     <div class="footer-bottom">
-        <p>Binit es una empresa del grupo <a href="https://subgen.ai/" target="_blank" title="SubgenAI" class="decoration">SubgenAI</a></p>
-        <p>© 2025 BINIT. Reservados todos los derechos | 
-            <a href="#" target="_blank" title="Política de Privacidad">Política de Privacidad</a> | 
-            <a href="#" target="_blank" title="Política de Cookies">Política de Cookies</a> | 
-            <a href="#" target="_blank" title="Aviso Legal">Aviso Legal</a></p>
+        <p>{content.text_bottom.binit} <a href="https://subgen.ai/" target="_blank" title="SubgenAI" class="decoration">SubgenAI</a></p>
+        <p>{content.text_bottom.binit_derechos}
+            {content.text_bottom.items.map((item: { link: string; title: string} , index: number) => (
+             <> 
+                <a href={item.link} target="_blank" title={item.title}>{item.title}</a>  
+                {index < content.text_bottom.items.length - 1 && ' | '}
+             </>
+            ))}
     </div>
   </footer>  
