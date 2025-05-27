@@ -1,13 +1,16 @@
 ---
 const { lang, content } = Astro.props;
+
+const apiKey = import.meta.env.PUBLIC_CHATBOT_API_KEY;
+const agentCode = import.meta.env.PUBLIC_CHATBOT_AGENT_CODE;
 ---
 
 <section class="section_contact_01">
   <h1>{content.title}</h1>
 
   <div class="chat-container">
-    <div class="chat-body" id="chat-body">
-      <div class="message bot"><img class="" src="/img/smartbot/logo-binit-smartbot.svg" alt="" width="auto" height="50" /> <p>{content.description}</p></div>
+    <div class="chat-body" id="chat-body" data-api-key={apiKey} data-agent-code={agentCode} >
+      {/* <div class="message bot"><img class="" src="/img/smartbot/logo-binit-smartbot.svg" alt="" width="auto" height="50" /> <p>{content.description}</p></div> */}
     </div>
 
     <div class="chat-input">

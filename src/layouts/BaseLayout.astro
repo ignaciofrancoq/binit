@@ -29,7 +29,9 @@ const agentCode = import.meta.env.PUBLIC_CHATBOT_AGENT_CODE;
     <link rel="stylesheet" href="/styles/splide.min.css" />
 
     {/* ChatBot */}
-    <link rel="stylesheet" href="https://hub.serenitystar.ai/resources/chat.css" />
+    {pageName !== 'contact' && ( 
+      <link rel="stylesheet" href="https://hub.serenitystar.ai/resources/chat.css" />
+    )}
   </head>
   <body class={`page-${pageName}`}>
     <Header lang={lang} currentPath={Astro.url.pathname} />
@@ -45,43 +47,49 @@ const agentCode = import.meta.env.PUBLIC_CHATBOT_AGENT_CODE;
   <script src="/js/splide.min.js" is:inline></script>
   <script src="/js/script.js" is:inline defer></script>
 
-
   {/* Chat bot */}
-  <script src="https://hub.serenitystar.ai/resources/chat.js"></script>
-  <script>
-	document.addEventListener("DOMContentLoaded", function () {
-    const el = document.getElementById("aihub-chat");
-    const apiKey = el.dataset.apiKey;
-    const agentCode = el.dataset.agentCode;
+  {pageName !== 'contact' && ( 
+    <>
+    <script src="https://hub.serenitystar.ai/resources/chat.js"></script>
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const el = document.getElementById("aihub-chat");
+      const apiKey = el.dataset.apiKey;
+      const agentCode = el.dataset.agentCode;
 
-		const chat = new AIHubChat("aihub-chat", {
-			apiKey: apiKey,
-			agentCode: agentCode,
-			baseURL: "https://api.serenitystar.ai/api",
-      locale: { 
-        headerTitle: "Binit Smartbot",
-      },
-      theme: {
-        header: {
-            bgColor: "#005BBF",
-            textColor: "#FFFFFF",
+      const chat = new AIHubChat("aihub-chat", {
+        apiKey: apiKey,
+        agentCode: agentCode,
+        baseURL: "https://api.serenitystar.ai/api",
+        locale: { 
+          headerTitle: "Binit Smartbot",
         },
-        fabButton: {
-          bgColor: "#123C81",
-        },
-        messageBubble: {
-          user: {
-            bgColor: "#123C81",
-            textColor: "#fff",
+        theme: {
+          header: {
+              bgColor: "#005BBF",
+              textColor: "#FFFFFF",
           },
-          assistant: {
+          fabButton: {
             bgColor: "#123C81",
-            textColor: "#fff",
           },
-        },
-    }
-		});
-		chat.init();
-	});
-</script>
+          messageBubble: {
+            user: {
+              bgColor: "#123C81",
+              textColor: "#fff",
+            },
+            assistant: {
+              bgColor: "#123C81",
+              textColor: "#fff",
+            },
+          },
+      }
+      });
+      chat.init();
+    });
+    </script>
+    </>
+  )}
+  {pageName === 'contact' && (
+    <script src="/js/chat-api.js" is:inline defer></script>
+  )}
 </html>
