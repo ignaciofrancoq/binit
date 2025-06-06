@@ -51,52 +51,52 @@
         {
           "icon": "icon-solutions-01",
           "title": "Agro-Tech",
-          "link": "#"
+          "link": "/es/casos-de-exito#agro-tech"
         },
         {
           "icon": "icon-solutions-02",
           "title": "Smart Retail",
-          "link": "#"
+          "link": "/es/casos-de-exito#smart-retail"
         },
         {
           "icon": "icon-solutions-03",
           "title": "Healthcare",
-          "link": "#"
+          "link": "/es/casos-de-exito#healthcare"
         },
         {
           "icon": "icon-solutions-04",
           "title": "Insure-Tech",
-          "link": "#"
+          "link": "/es/casos-de-exito#insure-tech"
         },
         {
           "icon": "icon-solutions-05",
           "title": "Shared Economies",
-          "link": "#"
+          "link": "/es/casos-de-exito#shared-economies"
         },
         {
           "icon": "icon-solutions-06",
           "title": "E-Government",
-          "link": "#"
+          "link": "/es/casos-de-exito#e-government"
         },
         {
           "icon": "icon-solutions-07",
           "title": "Logistics",
-          "link": "#"
+          "link": "/es/casos-de-exito#logistics"
         },
         {
           "icon": "icon-solutions-08",
           "title": "Oil & Gas",
-          "link": "#"
+          "link": "/es/casos-de-exito#oil-gas"
         },
         {
           "icon": "icon-solutions-09",
           "title": "Ed-Tech",
-          "link": "#"
+          "link": "/es/casos-de-exito#ed-tech"
         },
         {
           "icon": "icon-solutions-10",
           "title": "Legal-Tech",
-          "link": "#"
+          "link": "/es/casos-de-exito#legal-tech"
         }
       ]
     },

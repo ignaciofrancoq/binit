@@ -160,6 +160,7 @@ header {
       cursor: pointer;
       padding: 0;
       z-index: 1000;
+      border-radius: 0;
 
       @include mixins.respond-to(md) {
         display: block !important;
@@ -169,7 +170,7 @@ header {
         display: block;
         height: 2px;
         margin-bottom: 5px;
-        width: 100%;
+        width: 30px;
         background: #fff;
         border-radius: 3px;
         transition: all 0.3s ease;
