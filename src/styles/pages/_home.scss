@@ -95,6 +95,9 @@
         background-color: #061E46;
         padding: 1.5rem 1.8rem;
         border-radius: 23px;
+        @include mixins.respond-to(md) {
+          margin: 0 auto;
+        }
         .carousel-img{
           margin-bottom: 1rem;
         }
@@ -121,6 +124,10 @@
       @include mixins.respond-to(lg) {
         bottom: -5px;
         left:33%;
+      }
+      @include mixins.respond-to(md) {
+        left: 39%;
+        transform: translateX(-50%);
       }
       .splide__arrow--prev{
         right: 1rem;
