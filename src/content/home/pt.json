@@ -1,186 +1,193 @@
 {
-    "seo": {
-      "title": "Home | BINIT",
-      "description": "Tecnologia para alcançar a sua visão de negócio. Fornecemos e co-criamos plataformas tecnológicas inovadoras.",
-      "keywords": "Inovação, Tecnologia, Visão de Negócio, Plataformas Tecnológicas, Inovador, Co‑criação, Startups, Parceiro tecnológico, Escala digital, Equipes de desenvolvimento, Logística, Varejo inteligente, Plataformas de serviços digitais, Agrotech, Saúde, Economias compartilhadas, Redes comunitárias, Desafio, Transformação digital, Metodologia, Great Place To Work, Fontes de receita, Ecossistemas tecnológicos",
-      "image": "https://binit.tech/media/eglf2qcj/logo_bajada.png"
-    },
-    "main_banner": {
-      "heading": "Estratégia de IA da BINIT",
-      "subtitle": "Desenvolvemos soluções de negócios potencializadas com IA Generativa",
-      "content": "Aproveitamos nossa tecnologia avançada, oferecemos suporte especializado e temos um histórico comprovado de sucesso.",
-      "buttonText": "Quero impulsionar meu negócio"
-    },
-    "list_carousel": {
-      "heading": "O que fazemos",
-      "intro_0": "Na <strong>Binit</strong>, somos especializados em design de software, consultoria e desenvolvimento, criação de plataformas tecnológicas, transformação digital e inteligência artificial generativa aplicada.",
-      "intro_1": "Nosso <strong>objetivo</strong> é impulsionar a transformação digital dos seus produtos, serviços e negócios. Nossos especialistas em IA generativa estão prontos para potencializar seus projetos com um processo ágil e focado nas suas necessidades.",
-      "items": [
-        {
-          "icon": "icon-carousel-01",
-          "title": "Impulsamos negocios con soluciones de IA",
-          "content": "Potenciamos negocios con soluciones de IA personalizadas, logrando posicionar a las empresas como líderes en sus industrias."
-        },
-        {
-          "icon": "icon-carousel-02",
-          "title": "Generamos productos digitales",
-          "content": "Creamos plataformas digitales a medida, de forma rápida y escalable."
-        },
-        {
-          "icon": "icon-carousel-03",
-          "title": "Creamos ecosistemas tecnológicos",
-          "content": "Desarrollamos infraestructuras que conectan sistemas de forma eficiente, ahorrando tiempo y costos."
-        },
-        {
-          "icon": "icon-carousel-04",
-          "title": "Construimos plataformas de servicios digitales",
-          "content": "Diseñamos plataformas novedosas que permiten mejorar y escalar los servicios y procesos de todo tipo de empresas"
-        }
+   "seo":{
+      "title":"Home | BINIT",
+      "description":"Tecnologia para alcançar sua visão de negócio. Fornecemos e co-criamos plataformas tecnológicas inovadoras.",
+      "keywords":"Inovação, Tecnologia, Visão de negócio, Plataformas tecnológicas, Inovador, Co‑criar, Startups, Parceiro tecnológico, Escala digital, Equipes de desenvolvimento, Logística, Varejo inteligente, Plataformas de serviço digital, Agrotech, Saúde, Economias compartilhadas, Redes comunitárias, Desafio, Transformação digital, Metodologia, Great Place To Work, Fontes de receita, Ecossistemas tecnológicos",
+      "image":"https://binit.tech/media/eglf2qcj/logobajada.png"
+   },
+   "main_banner":{
+      "heading":"BINIT AI Strategy",
+      "subtitle":"Desenvolvemos soluções de negócio</br> potencializadas com IA Generativa",
+      "content":"Utilizamos nossa tecnologia avançada, oferecemos </br>acompanhamento especializado e temos um histórico de </br>experiência comprovada.",
+      "buttonText":"Quero potencializar meu negócio"
+   },
+   "list_carousel":{
+      "heading":"O que fazemos?",
+      "intro0":"Na <strong>Binit</strong> somos especializados em design, consultoria e desenvolvimento de software, criação de plataformas tecnológicas, transformação digital e inteligência artificial generativa aplicada.",
+      "intro1":"Nosso objetivo é impulsionar a transformação digital dos seus produtos, serviços e negócio. Nossos especialistas em IA generativa estão prontos para potencializar seus projetos através de um processo ágil e centrado nas suas necessidades.",
+      "items":[
+         {
+            "icon":"icon-carousel-01",
+            "title":"Impulsionamos negócios com soluções de IA",
+            "content":"Potencializamos negócios com soluções de IA personalizadas, posicionando as empresas como líderes em seus setores."
+         },
+         {
+            "icon":"icon-carousel-02",
+            "title":"Geramos produtos digitais",
+            "content":"Criamos plataformas digitais sob medida, de forma rápida e escalável."
+         },
+         {
+            "icon":"icon-carousel-03",
+            "title":"Criamos ecossistemas tecnológicos",
+            "content":"Desenvolvemos infraestruturas que conectam sistemas de forma eficiente, economizando tempo e custos."
+         },
+         {
+            "icon":"icon-carousel-04",
+            "title":"Construímos plataformas de serviços digitais",
+            "content":"Desenhamos plataformas inovadoras que permitem melhorar e escalar os serviços e processos de todos os tipos de empresas"
+         }
       ]
-    },
-    "how_we_do":{
-      "heading": "¿Cómo lo hacemos?",
-      "intro_0": "Aplicamos <strong>Rapid Prototyping, Design Thinking y metodologías ágiles</strong> para transformar ideas en soluciones funcionales de manera rápida y eficiente.",
-      "intro_1": "Realizamos una inversión constante en <strong>Investigación y Desarrollo (I+D)</strong>, analizando e integrando alternativas <strong>open source</strong> y comerciales para optimizar cada etapa del proceso. Esto nos permite acelerar el desarrollo sin comprometer la calidad",
-      "intro_2": "Con este enfoque, reducimos tiempos y costos, garantizando soluciones escalables, flexibles e integradas, sin depender de software propietario."
-    },
-    "solutions":{
-      "heading": "Desarrollamos soluciones para todo tipo de industrias",
-      "buttonText": "Quiero saber más",
-      "items": [
-        {
-          "icon": "icon-solutions-01",
-          "title": "Agro-Tech",
-          "link": "/pt/estudos-de-caso#agro-tech"
-        },
-        {
-          "icon": "icon-solutions-02",
-          "title": "Smart Retail",
-          "link": "/pt/estudos-de-caso#smart-retail"
-        },
-        {
-          "icon": "icon-solutions-03",
-          "title": "Healthcare",
-          "link": "/pt/estudos-de-caso#healthcare"
-        },
-        {
-          "icon": "icon-solutions-04",
-          "title": "Insure-Tech",
-          "link": "/pt/estudos-de-caso#insure-tech"
-        },
-        {
-          "icon": "icon-solutions-05",
-          "title": "Shared Economies",
-          "link": "/pt/estudos-de-caso#shared-economies"
-        },
-        {
-          "icon": "icon-solutions-06",
-          "title": "E-Government",
-          "link": "/pt/estudos-de-caso#e-government"
-        },
-        {
-          "icon": "icon-solutions-07",
-          "title": "Logistics",
-          "link": "/pt/estudos-de-caso#logistics"
-        },
-        {
-          "icon": "icon-solutions-08",
-          "title": "Oil & Gas",
-          "link": "/pt/estudos-de-caso#oil-gas"
-        },
-        {
-          "icon": "icon-solutions-09",
-          "title": "Ed-Tech",
-          "link": "/pt/estudos-de-caso#ed-tech"
-        },
-        {
-          "icon": "icon-solutions-10",
-          "title": "Legal-Tech",
-          "link": "/pt/estudos-de-caso#legal-tech"
-        }
+   },
+   "how_we_do":{
+      "heading":"Como fazemos?",
+      "intro0":"Aplicamos <strong>Rapid Prototyping, Design Thinking e metodologias ágeis</strong> para transformar ideias em soluções funcionais de maneira rápida e eficiente.",
+      "intro1":"Realizamos um investimento constante em <strong>Pesquisa e Desenvolvimento (P&D)</strong>, analisando e integrando alternativas <strong>open source</strong> e comerciais para otimizar cada etapa do processo. Isso nos permite acelerar o desenvolvimento sem comprometer a qualidade.",
+      "intro2":"Com essa abordagem, reduzimos tempo e custos, garantindo soluções escaláveis, flexíveis e integradas, sem depender de software proprietário."
+   },
+   "solutions":{
+      "heading":"Desenvolvemos soluções para todos os tipos de indústrias",
+      "buttonText":"Quero saber mais",
+      "items":[
+         {
+            "icon":"icon-solutions-01",
+            "title":"Agro-Tech",
+            "link":"/pt/estudos-de-caso#agro-tech"
+         },
+         {
+            "icon":"icon-solutions-02",
+            "title":"Smart Retail",
+            "link":"/pt/estudos-de-caso#smart-retail"
+         },
+         {
+            "icon":"icon-solutions-03",
+            "title":"Healthcare",
+            "link":"/pt/estudos-de-caso#healthcare"
+         },
+         {
+            "icon":"icon-solutions-04",
+            "title":"Insure-Tech",
+            "link":"/pt/estudos-de-caso#insure-tech"
+         },
+         {
+            "icon":"icon-solutions-05",
+            "title":"Shared Economies",
+            "link":"/pt/estudos-de-caso#shared-economies"
+         },
+         {
+            "icon":"icon-solutions-06",
+            "title":"E-Government",
+            "link":"/pt/estudos-de-caso#e-government"
+         },
+         {
+            "icon":"icon-solutions-07",
+            "title":"Logistics",
+            "link":"/pt/estudos-de-caso#logistics"
+         },
+         {
+            "icon":"icon-solutions-08",
+            "title":"Oil & Gas",
+            "link":"/pt/estudos-de-caso#oil-gas"
+         },
+         {
+            "icon":"icon-solutions-09",
+            "title":"Ed-Tech",
+            "link":"/pt/estudos-de-caso#ed-tech"
+         },
+         {
+            "icon":"icon-solutions-10",
+            "title":"Legal-Tech",
+            "link":"/pt/estudos-de-caso#legal-tech"
+         }
       ]
-    },
-    "clients":{
-      "heading": "Algunas de las startups y corporaciones que confían en nosotros",
-      "items": [
-        {
-          "icon": "4d",
-          "title": "4d Diagnostico por imagen"
-        },
-        {
-          "icon": "BA-ciudad",
-          "title": "Buenos Aires Ciudad"
-        },
-        {
-          "icon": "charles-taylor",
-          "title": "Charles Taylor"
-        },
-        {
-          "icon": "dasa",
-          "title": "Dasa"
-        },
-        {
-          "icon": "dt-global",
-          "title": "DT Global"
-        },
-        {
-          "icon": "fleebe",
-          "title": "Fleebe"
-        },
-        {
-          "icon": "globalfarm",
-          "title": "Globalfarm"
-        },
-        {
-          "icon": "holcim",
-          "title": "Holcim"
-        },
-        {
-          "icon": "ituran",
-          "title": "Ituran"
-        },
-        {
-          "icon": "jbs",
-          "title": "JBS"
-        },
-        {
-          "icon": "john-deere",
-          "title": "John Deere"
-        },
-        {
-          "icon": "keko",
-          "title": "Keko"
-        },
-        {
-          "icon": "nuubo",
-          "title": "Nuubo"
-        },
-        {
-          "icon": "soy-guiri",
-          "title": "Soy Guiri"
-        },
-        {
-          "icon": "tecpetrol",
-          "title": "Tecpetrol"
-        },
-        {
-          "icon": "tomorrow-foods",
-          "title": "Tomorrow Foods"
-        },
-        {
-          "icon": "visma",
-          "title": "Visma"
-        }
+   },
+   "clients":{
+      "heading":"Algumas das startups e corporações que confiam em nós",
+      "items":[
+         {
+            "icon":"4d",
+            "title":"4d Diagnóstico por imagem"
+         },
+         {
+            "icon":"BA-ciudad",
+            "title":"Buenos Aires Ciudad"
+         },
+         {
+            "icon":"charles-taylor",
+            "title":"Charles Taylor"
+         },
+         {
+            "icon":"dasa",
+            "title":"Dasa"
+         },
+         {
+            "icon":"dt-global",
+            "title":"DT Global"
+         },
+         {
+            "icon":"fleebe",
+            "title":"Fleebe"
+         },
+         {
+            "icon":"globalfarm",
+            "title":"Globalfarm"
+         },
+         {
+            "icon":"holcim",
+            "title":"Holcim"
+         },
+         {
+            "icon":"ituran",
+            "title":"Ituran"
+         },
+         {
+            "icon":"jbs",
+            "title":"JBS"
+         },
+         {
+            "icon":"john-deere",
+            "title":"John Deere"
+         },
+         {
+            "icon":"keko",
+            "title":"Keko"
+         },
+         {
+            "icon":"nuubo",
+            "title":"Nuubo"
+         },
+         {
+            "icon":"soy-guiri",
+            "title":"Soy Guiri"
+         },
+         {
+            "icon":"tecpetrol",
+            "title":"Tecpetrol"
+         },
+         {
+            "icon":"tomorrow-foods",
+            "title":"Tomorrow Foods"
+         },
+         {
+            "icon":"visma",
+            "title":"Visma"
+         }
       ]
-    },
-    "we_are":{
+   },
+   "we_are":{
       "heading":"Somos ",
-      "items": [ "innovadores", "creativos", "eficiente" ],
-      "content": "Somos una empresa líder en consultoría, desarrollo de software e implementación de inteligencia artificial generativa. Formamos parte del grupo Subgen.AI, una empresa dedicada a impulsar la innovación de la IA generativa."
-    },
-    "world":{
-      "heading":"Transformamos realidades alrededor del mundo",
-      "icon": "map-pt",
-      "buttonText": "Hablemos"
-    }
-  }  
+      "items":[
+         "inovadores",
+         "criativos",
+         "eficientes",
+         "inovadores",
+         "criativos",
+         "eficientes"
+      ],
+      "content":"Somos uma empresa líder em consultoria, desenvolvimento de software e implementação de inteligência artificial generativa.</br> Fazemos parte do grupo <a href='https://subgen.ai/' title='SubgenAI'>Subgen.AI</a>, uma empresa dedicada a impulsionar a inovação da IA generativa."
+   },
+   "world":{
+      "heading":"Transformamos realidades ao redor do mundo",
+      "icon":"map-pt",
+      "buttonText":"Vamos conversar!"
+   }
+}

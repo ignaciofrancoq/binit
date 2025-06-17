@@ -1,11 +1,10 @@
 {
-  "seo": {
-      "title": "Contact | BINIT",
-      "description": "Technology to achieve your business vision. We provide and co-create innovative technological platforms.",
-      "keywords": "Innovation, Technology, Business Vision, Technological platforms, Innovative, Co‑create, Startups, Technological partner, Digital Scale, Development teams, Logistics, Smart retail, Digital Service Platforms, Agrotech, Healthcare, Shared economies, Community networks, Challenge, Digital transformation, Methodology, Great Place To Work, Revenue Streams, Technological ecosystems",
-      "image": "https://binit.tech/media/eglf2qcj/logo_bajada.png"
-    },
-    "title": "Contact",
-    "description": "¡Hola! Soy el asistente experto de Binit. Estoy listo para responder todas las dudas que tengas sobre nuestra compañía y desarrollos. ¿Qué te gustaría saber?"
-  }
-  
+   "seo":{
+      "title":"Contact | BINIT",
+      "description":"Technology to achieve your business vision. We provide and co-create innovative technological platforms.",
+      "keywords":"Innovation, Technology, Business Vision, Technological platforms, Innovative, Co‑create, Startups, Technological partner, Digital Scale, Development teams, Logistics, Smart retail, Digital Service Platforms, Agrotech, Healthcare, Shared economies, Community networks, Challenge, Digital transformation, Methodology, Great Place To Work, Revenue Streams, Technological ecosystems",
+      "image":"https://binit.tech/media/eglf2qcj/logo_bajada.png"
+   },
+   "title":"Contact",
+   "description":"Hello! I am Binit's expert assistant. I am ready to answer any questions you may have about our company and developments. What would you like to know?"
+}

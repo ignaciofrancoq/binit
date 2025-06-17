@@ -1,191 +1,233 @@
 {
-
-  "seo": {
-      "title": "Case Studies | BINIT",
+   "seo":{
+      "title":"Casos de estudo | BINIT",
       "description": "Technology to achieve your business vision. We provide and co-create innovative technological platforms.",
       "keywords": "Innovation, Technology, Business Vision, Technological platforms, Innovative, Co‑create, Startups, Technological partner, Digital Scale, Development teams, Logistics, Smart retail, Digital Service Platforms, Agrotech, Healthcare, Shared economies, Community networks, Challenge, Digital transformation, Methodology, Great Place To Work, Revenue Streams, Technological ecosystems",
       "image": "https://binit.tech/media/eglf2qcj/logo_bajada.png"
-    },
-    "main_banner": {
-      "heading": "Casos de estudio",
-      "subtitle": "Conozca algunos de nuestros casos de negocio y proyectos innovadores."
-    },
-    "cases": [
+   },
+   "main_banner":{
+      "heading":"Casos de estudo",
+      "subtitle":"Conheça alguns dos nossos casos de negócio e projetos inovadores."
+   },
+   "cases":[
       {
-        "heading": "Agro-Tech",
-        "hash": "agro-tech",
-        "items": [
-          {
-            "logo": "01-agrotech-jbs",
-            "logo-title": "jbs",
-            "title": "Sistema de gestión integral de granjas productivas.​",
-            "content": "Potente grupo de sistemas desarrollados para la industria de producción alimenticia. Brinda información inmediata que permite tomar decisiones, optimizar recursos, evitar sobrecostos e improductividades.",
-            "flags": ["br"]
-          },
-          {
-            "logo": "01-agrotech-seara",
-            "logo-title": "Seara",
-            "title": "Comunicación, registro de actividades y noticias en una sola aplicación.​​",
-            "content": "Plataforma integrada de comunicación y gestión utilizada por 12.000 productores. Optimiza los costos, trackea el bienestar animal, proporciona seguimiento y permite la mejora continua, con una cobertura integral del proceso.​",
-            "flags": ["br"]
-          },
-          {
-            "logo": "01-agrotech-johndeere",
-            "logo-title": "John Deere",
-            "title": "Orquestador de operaciones de logística.​",
-            "content": "Plataforma para enviar y recibir información desde y hacia  los distribuidores. Funciona como intermediador entre John Deere y sus distribuidores. Estructuración de datos, estadísticas en base a métricas predefinidas y comunicación de archivos son algunas de las principales funciones empleadas.",
-            "flags": ["br","do", "ec","cr", "pr", "sv", "gt", "py", "pe", "uy", "hn"]
-          }
-        ]
+         "heading":"Agro-Tech",
+         "hash":"agro-tech",
+         "items":[
+            {
+               "logo":"01-agrotech-jbs",
+               "logo-title":"jbs",
+               "title":"Sistema de gestão integral de fazendas produtivas.​",
+               "content":"Poderoso conjunto de sistemas desenvolvidos para a indústria de produção de alimentos. Fornece informações imediatas que permitem tomar decisões, otimizar recursos, evitar custos extras e improdutividades.",
+               "flags":[
+                  "br"
+               ]
+            },
+            {
+               "logo":"01-agrotech-seara",
+               "logo-title":"Seara",
+               "title":"Comunicação, registro de atividades e notícias em um único aplicativo.​",
+               "content":"Plataforma integrada de comunicação e gestão utilizada por 12.000 produtores. Otimiza os custos, rastreia o bem-estar animal, proporciona acompanhamento e permite a melhoria contínua, com uma cobertura integral do processo.​",
+               "flags":[
+                  "br"
+               ]
+            },
+            {
+               "logo":"01-agrotech-johndeere",
+               "logo-title":"John Deere",
+               "title":"Orquestrador de operações logísticas.​",
+               "content":"Plataforma para enviar e receber informações de e para os distribuidores. Funciona como intermediário entre a John Deere e seus distribuidores. Estruturação de dados, estatísticas baseadas em métricas predefinidas e comunicação de arquivos são algumas das principais funções empregadas.",
+               "flags":[
+                  "br",
+                  "do",
+                  "ec",
+                  "cr",
+                  "pr",
+                  "sv",
+                  "gt",
+                  "py",
+                  "pe",
+                  "uy",
+                  "hn"
+               ]
+            }
+         ]
       },
       {
-        "heading": "Smart Retail",
-        "hash": "smart-retail",
-        "items": [
-          {
-            "logo": "02-smartretail-comerzzia",
-            "logo-title": "Comerzzia",
-            "title": "El complemento perfecto para tu ERP.​",
-            "content": "Plataforma diseñada para que los sistemas de tu empresa hagan lo que necesitás de forma ágil, flexible y moderna. Es el complemento ideal porque nos integramos con la tecnología que ya tenés, hacemos que hable un idioma claro y simple, y que escale con nuevas funcionalidades para competir en el mercado.",
-            "flags": ["ar"]
-          },
-          {
-            "logo": "02-smartretail-saporedipane",
-            "logo-title": "Sapore di Pane",
-            "title": "​AI entrenada para ofrecer soluciones a los retailers.​",
-            "content": "Plataforma de análisis digital con IA que pone en valor el Big Data de los procesos de venta para proponer las mejores promociones y cupones para que lo apliquen en los departamentos de Marketing, Comercial o Gerencia. Puede ayudar a aumentar la frecuencia de compra, captar nuevos clientes fidelizados, aumentar el ticket medio, potenciar categorías que no se venden, y premiar la fidelidad.​",
-            "flags": ["es"]
-          }
-        ]
+         "heading":"Smart Retail",
+         "hash":"smart-retail",
+         "items":[
+            {
+               "logo":"02-smartretail-comerzzia",
+               "logo-title":"Comerzzia",
+               "title":"O complemento perfeito para seu ERP.​",
+               "content":"Plataforma projetada para que os sistemas da sua empresa façam o que você precisa de forma ágil, flexível e moderna. É o complemento ideal porque nos integramos com a tecnologia que você já possui, fazemos com que fale uma linguagem clara e simples, e que escale com novas funcionalidades para competir no mercado.",
+               "flags":[
+                  "ar"
+               ]
+            },
+            {
+               "logo":"02-smartretail-saporedipane",
+               "logo-title":"Sapore di Pane",
+               "title":"IA treinada para oferecer soluções aos varejistas.​",
+               "content":"Plataforma de análise digital com IA que valoriza o Big Data dos processos de venda para propor as melhores promoções e cupons para serem aplicados nos departamentos de Marketing, Comercial ou Gerência. Pode ajudar a aumentar a frequência de compra, captar novos clientes fidelizados, aumentar o ticket médio, impulsionar categorias que não vendem e premiar a fidelidade.​",
+               "flags":[
+                  "es"
+               ]
+            }
+         ]
       },
       {
-        "heading": "Healthcare",
-        "hash": "healthcare",
-        "items": [
-          {
-            "logo": "03-healthcare-globalfarm",
-            "logo-title": "Globalfarm",
-            "title": "​Automatización de procesos con IA.",
-            "content": "Se desarrollaron múltiples agentes automatizados para la verificación y gestión de órdenes de compra, reduciendo el tiempo dedicado a estas tareas. Se automatizó la gestión de licitaciones gubernamentales, integrando criterios de evaluación y presentación de ofertas de manera automatizada y centralizada.",
-            "flags": ["ar"]
-          },
-          {
-            "logo": "03-healthcare-rabbit",
-            "logo-title": "Rabbit",
-            "title": "Plataforma para la gestión de historia clínica.​​",
-            "content": "Hace al paciente dueño de sus datos.​ Consigue consentimientos para tratamiento de datos de forma automática con IA.​ Ayuda al médico en sus diagnósticos con el análisis del historial clínico de cada paciente por IA.​",
-            "flags": ["ar"]
-          },
-          {
-            "logo": "03-healthcare-dasa-diagnosticomaipu",
-            "logo-title": "Dasa - Diagnostico Maipu",
-            "title": "Portal de pacientes, estudios y resultados.​",
-            "content": "Desarrollo de Portal de Pacientes para Estudios de Laboratorio y Clínicos con informes y visualización imágenes.",
-            "flags": ["ar"]
-          }
-        ]
+         "heading":"Healthcare",
+         "hash":"healthcare",
+         "items":[
+            {
+               "logo":"03-healthcare-globalfarm",
+               "logo-title":"Globalfarm",
+               "title":"Automatização de processos com IA.",
+               "content":"Foram desenvolvidos múltiplos agentes automatizados para a verificação e gestão de ordens de compra, reduzindo o tempo dedicado a essas tarefas. A gestão de licitações governamentais foi automatizada, integrando critérios de avaliação e apresentação de propostas de forma automatizada e centralizada.",
+               "flags":[
+                  "ar"
+               ]
+            },
+            {
+               "logo":"03-healthcare-rabbit",
+               "logo-title":"Rabbit",
+               "title":"Plataforma para gestão de prontuário eletrônico.​",
+               "content":"Torna o paciente dono dos seus dados.​ Obtém consentimentos para tratamento de dados de forma automática com IA.​ Ajuda o médico em seus diagnósticos com a análise do histórico clínico de cada paciente por IA.​",
+               "flags":[
+                  "ar"
+               ]
+            },
+            {
+               "logo":"03-healthcare-dasa-diagnosticomaipu",
+               "logo-title":"Dasa - Diagnostico Maipu",
+               "title":"Portal de pacientes, exames e resultados.​",
+               "content":"Desenvolvimento de Portal de Pacientes para Exames Laboratoriais e Clínicos com relatórios e visualização de imagens.",
+               "flags":[
+                  "ar"
+               ]
+            }
+         ]
       },
       {
-        "heading": "Insure-Tech",
-        "hash": "insure-tech",
-        "items": [
-          {
-            "logo": "04-insuretech-charlestaylor",
-            "logo-title": "Charles Taylor",
-            "title": "Plataformas de gestión de datos y servicios de seguros.​",
-            "content": "Se desarrollaron plataformas para gestionar siniestros (claims), bordereaux, y otras tareas administrativas, modernizando los sistemas existentes y permitiendo una gestión más ágil de los datos de clientes. También se desarrolló una plataforma para la digitalización y modernización de servicios, optimizando la interacción entre los sistemas de seguros y los usuarios.",
-            "flags": ["ar"]
-          }
-        ]
+         "heading":"Insure-Tech",
+         "hash":"insure-tech",
+         "items":[
+            {
+               "logo":"04-insuretech-charlestaylor",
+               "logo-title":"Charles Taylor",
+               "title":"Plataformas de gestão de dados e serviços de seguros.​",
+               "content":"Foram desenvolvidas plataformas para gerenciar sinistros (claims), bordereaux e outras tarefas administrativas, modernizando os sistemas existentes e permitindo uma gestão mais ágil dos dados dos clientes. Também foi desenvolvida uma plataforma para a digitalização e modernização de serviços, otimizando a interação entre os sistemas de seguros e os usuários.",
+               "flags":[
+                  "ar"
+               ]
+            }
+         ]
       },
       {
-        "heading": "Shared Economies",
-        "hash": "shared-economies",
-        "items": [
-          {
-            "logo": "05-sharedeconomies-keko-rdamobility",
-            "logo-title": "Keko - rda mobility",
-            "title": "Aplicación de alquiler de autos.​​",
-            "content": "Plataforma innovadora para gestionar el alquiler de vehículos por minutos en varios países de Latinoamérica y Esta plataforma integra capacidades para la planificación de rutas y optimización del uso de vehículos.  Fue implementada en países como México, Argentina, Brasil y Colombia, y seleccionada por grandes empresas como MercadoLibre y Arval para la gestión de flotas y distribución de última milla.",
-            "flags": ["ar", "mx", "br"]
-          }
-        ]
+         "heading":"Shared Economies",
+         "hash":"shared-economies",
+         "items":[
+            {
+               "logo":"05-sharedeconomies-keko-rdamobility",
+               "logo-title":"Keko - rda mobility",
+               "title":"Aplicativo de aluguel de carros.​",
+               "content":"Plataforma inovadora para gerenciar o aluguel de veículos por minutos em vários países da América Latina. Esta plataforma integra capacidades para o planejamento de rotas e otimização do uso de veículos. Foi implementada em países como México, Argentina, Brasil e Colômbia, e selecionada por grandes empresas como MercadoLivre e Arval para a gestão de frotas e distribuição de última milha.",
+               "flags":[
+                  "ar",
+                  "mx",
+                  "br"
+               ]
+            }
+         ]
       },
       {
-        "heading": "E-Government",
-        "hash": "e-government",
-        "items": [
-          {
-            "logo": "06-egovernment-baciudad",
-            "logo-title": "Buenos Aires Ciudad",
-            "title": "​Sistema de Fiscalización Electrónica Remota para la regulación comercial.",
-            "content": "SIFER es un sistema de gestión de inspección remota realizado para el Gobierno de Buenos Aires. Se trata de una herramienta de inspección que sirve, entre otros aportes, como un canal de Comunicación entre la Agencia Gubernamental de Control (AGC) y los establecimientos comerciales.​",
-            "flags": ["ar"]
-          }
-        ]
+         "heading":"E-Government",
+         "hash":"e-government",
+         "items":[
+            {
+               "logo":"06-egovernment-baciudad",
+               "logo-title":"Buenos Aires Ciudad",
+               "title":"Sistema de Fiscalização Eletrônica Remota para regulação comercial.",
+               "content":"SIFER é um sistema de gestão de inspeção remota realizado para o Governo de Buenos Aires. Trata-se de uma ferramenta de inspeção que serve, entre outros benefícios, como um canal de comunicação entre a Agência Governamental de Controle (AGC) e os estabelecimentos comerciais.​",
+               "flags":[
+                  "ar"
+               ]
+            }
+         ]
       },
       {
-        "heading": "Logistics",
-        "hash": "logistics",
-        "items": [
-          {
-            "logo": "07-logistics-exquisitefruits",
-            "logo-title": "Exquisite Fruits",
-            "title": "Asistente de logística con IA.​",
-            "content": "Asistente virtual que puede resolver todas las consultas relacionadas con logística como asistente en webapp y como asistente vía WhatsApp. El asistente no solo responde consultas, sino que también puede añadir nuevos canales de comunicación, funcionando como asistente de llamadas telefónicas, y permitir la corrección y actualización de información en el sistema.",
-            "flags": ["es"]
-          },
-          {
-            "logo": "07-logistics-ituran-holcim",
-            "logo-title": "Ituran - Holcim",
-            "title": "Sistema de monitoreo de flotas de vehículos.​",
-            "content": "Esta plataforma refuerza la seguridad del vehículo y permite un mejor control y seguimiento, gracias a sus principales funciones como alertas, localización y reportes de actividades.​ La plataforma recibe miles de datos por segundo de cada auto perteneciente a cada flota. Fue desarrollada para procesar y gestionar grandes volúmenes de datos que se actualizan constantemente.",
-            "flags": ["ar"]
-          }
-        ]
+         "heading":"Logistics",
+         "hash":"logistics",
+         "items":[
+            {
+               "logo":"07-logistics-exquisitefruits",
+               "logo-title":"Exquisite Fruits",
+               "title":"Assistente de logística com IA.​",
+               "content":"Assistente virtual que pode resolver todas as consultas relacionadas à logística como assistente em webapp e como assistente via WhatsApp. O assistente não só responde consultas, mas também pode adicionar novos canais de comunicação, funcionando como assistente de chamadas telefônicas, e permitir a correção e atualização de informações no sistema.",
+               "flags":[
+                  "es"
+               ]
+            },
+            {
+               "logo":"07-logistics-ituran-holcim",
+               "logo-title":"Ituran - Holcim",
+               "title":"Sistema de monitoramento de frotas de veículos.​",
+               "content":"Esta plataforma reforça a segurança do veículo e permite um melhor controle e acompanhamento, graças às suas principais funções como alertas, localização e relatórios de atividades.​ A plataforma recebe milhares de dados por segundo de cada carro pertencente a cada frota. Foi desenvolvida para processar e gerenciar grandes volumes de dados que são constantemente atualizados.",
+               "flags":[
+                  "ar"
+               ]
+            }
+         ]
       },
       {
-        "heading": "Oil & Gas",
-        "hash": "oil-gas",
-        "items": [
-          {
-            "logo": "08-oilandgas-tecpetrol",
-            "logo-title": "Tecpetrol",
-            "title": "Investigación asistida por IA​",
-            "content": "Plataforma donde se configuran temas de investigación para realizar búsquedas de información y capturar señales. La aplicación se encarga de realizar la obtención de información desde distintas fuentes seleccionadas previamente, para luego realizar procesos asistidos por inteligencia artificial (filtro de temas de interés, ordenamiento y priorización, y armado de newsletter).",
-            "flags": ["ar"]
-          }
-        ]
+         "heading":"Oil & Gas",
+         "hash":"oil-gas",
+         "items":[
+            {
+               "logo":"08-oilandgas-tecpetrol",
+               "logo-title":"Tecpetrol",
+               "title":"Pesquisa assistida por IA​",
+               "content":"Plataforma onde são configurados temas de pesquisa para realizar buscas de informações e capturar sinais. O aplicativo se encarrega de obter informações de diferentes fontes previamente selecionadas, para depois realizar processos assistidos por inteligência artificial (filtro de temas de interesse, ordenação e priorização, e montagem de newsletter).",
+               "flags":[
+                  "ar"
+               ]
+            }
+         ]
       },
       {
-        "heading": "Ed-Tech",
-        "hash": "ed-tech",
-        "items": [
-          {
-            "logo": "09-edtech-soyguiri",
-            "logo-title": "Soy Guiri",
-            "title": "Plataforma educativa para el aprendizaje de idiomas​",
-            "content": "Plataforma educativa orientada al aprendizaje de idiomas que ofrece a sus alumnos cursos diseñados a medida por la academia, donde son guiados en su aprendizaje a través de profesores con clases online y con la realización de ejercicios online que son corregidos y asistidos con inteligencia artificial.",
-            "flags": ["es"]
-          }
-        ]
+         "heading":"Ed-Tech",
+         "hash":"ed-tech",
+         "items":[
+            {
+               "logo":"09-edtech-soyguiri",
+               "logo-title":"Soy Guiri",
+               "title":"Plataforma educacional para o aprendizado de idiomas​",
+               "content":"Plataforma educacional orientada ao aprendizado de idiomas que oferece aos seus alunos cursos desenhados sob medida pela academia, onde são guiados em seu aprendizado por professores com aulas online e com a realização de exercícios online que são corrigidos e assistidos por inteligência artificial.",
+               "flags":[
+                  "es"
+               ]
+            }
+         ]
       },
       {
-        "heading": "Legal-Tech",
-        "hash": "legal-tech",
-        "items": [
-          {
-            "logo": "10-legaltech-cremadesycalvosotelo",
-            "logo-title": "Cremades y Calvo-Sotelo",
-            "title": "Asesoramiento en caso de despido a través de IA.​​",
-            "content": "Plataforma que combina tecnología, inteligencia artificial y experiencia legal para agilizar todo el proceso de generación y gestión de la documentación asociada a procesos de despido.",
-            "flags": ["es"]
-          }
-        ]
+         "heading":"Legal-Tech",
+         "hash":"legal-tech",
+         "items":[
+            {
+               "logo":"10-legaltech-cremadesycalvosotelo",
+               "logo-title":"Cremades y Calvo-Sotelo",
+               "title":"Assessoria em caso de demissão através de IA.​",
+               "content":"Plataforma que combina tecnologia, inteligência artificial e experiência jurídica para agilizar todo o processo de geração e gestão da documentação associada a processos de demissão.",
+               "flags":[
+                  "es"
+               ]
+            }
+         ]
       }
-    ],
-    "footer_page": {
-      "buttonText": "Quiero saber más"
-    }
-  }
-  
+   ],
+   "footer_page":{
+      "buttonText":"Quero saber mais"
+   }
+}

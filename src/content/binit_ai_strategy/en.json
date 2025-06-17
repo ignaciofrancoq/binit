@@ -6,70 +6,70 @@
       "image": "https://binit.tech/media/eglf2qcj/logo_bajada.png"
     },
     "main_banner": {
-      "heading": "Impulsemos su negocio con IA",
-      "subtitle": "Estamos listos para llevar su negocio al siguiente nivel. ¿Y usted?",
-      "buttonText": "Estoy listo"
+      "heading": "Let's boost your business </br>with AI",
+      "subtitle":"We are ready to take your business to the next </br>level. Are you?",
+      "buttonText":"I'm ready"
     },
     "binit_ai": {
-      "heading": "Binit AI Strategy",
-      "intro_0": "<strong>Un plan</strong> diseñado para cualquier start-up o corporación que quiera integrar la inteligencia artificial generativa en su negocio.",
-      "intro_1": "<strong>Nuestros sprints</strong> de desarrollo personalizados se adaptan perfectamente a su proyecto y necesidades.",
-      "intro_2": "<strong>Integre rápidamente la IA</strong> a su sistema y benefíciese de la orientación brindada por nuestros expertos en IA.",
+      "heading":"Binit AI Strategy",
+      "intro_0":"<strong> A plan </strong> designed for any start-up or corporation that wants to integrate generative artificial intelligence into their business.",
+      "intro_1":"<strong>Our personalized development sprints</strong> are perfectly tailored to your project and needs.",
+      "intro_2":"<strong>Quickly integrate AI</strong> into your system and benefit from the guidance provided by our AI experts.",
       "items": [
         {
-          "title": "Acompañamiento",
-          "content": "Contará con el acompañamiento  de nuestros ingenieros, desarrolladores y expertos en IA generativa desde el comienzo hasta el final del proceso."
-        },
-        {
-          "title": "Productividad",
-          "content": "Logrará reducir el tiempo dedicado a cualquier tarea con agentes de IA especializados y fáciles de usar para todo lo que necesite hacer."
-        },
-        {
-          "title": "Tecnología avanzada",
-          "content": "Integrará en sus sistemas la más avanzada tecnología de IA generativa, obteniendo una ventaja decisiva en el mercado."
+            "title":"Support",
+            "content":"You will have the support of our engineers, developers, and generative AI experts from start to finish."
+         },
+         {
+            "title":"Productivity",
+            "content":"You will be able to reduce the time spent on any task with specialized AI agents that are easy to use for everything you need to do."
+         },
+         {
+            "title":"Advanced technology",
+            "content":"You will integrate the most advanced generative AI technology into your systems, gaining a decisive advantage in the market."
         }
       ]
     },
     "integration_ai": {
-      "heading": "<span class='heading-degrade'>Integración de IA generativa:</span> mucho más que un chatbot",
-      "content": "Proveemos múltiples soluciones de integración de IA generativa listas para llevar su negocio al siguiente nivel. Explore todas las formas en las que puede revolucionar sus procesos, mejorar la eficiencia y transformar sus productos y servicios.",
+      "heading":"<span class='gradient-text'>Generative AI integration:</span> much more than a chatbot",
+      "content":"We provide multiple generative AI integration solutions ready to take your business to the next level. Explore all the ways you can revolutionize your processes, improve efficiency, and transform your products and services.",
       "items": [
         {
-          "icon": "icon-01",
-          "title": "Smartbot para atención al cliente",
-          "content": "Cree y entrene chatbots conversacionales para su sitio web, WhatsApp y otras plataformas, garantizando interacciones sin problemas con los clientes."
-        },
-        {
-          "icon": "icon-02",
-          "title": "Integración de IA en tus sistemas",
-          "content": "Optimice su ERP y productos digitales con agentes de sistema avanzados que automatizan tareas críticas y mejoran la eficiencia."
-        },
-        {
-          "icon": "icon-03",
-          "title": "Seguridad y regulación",
-          "content": "Integre la IA en todos los aspectos de su organización de manera segura y en cumplimiento con las regulaciones más estrictas."
-        },
-        {
-          "icon": "icon-04",
-          "title": "Adaptación garantizada",
-          "content": "Personalice y escale sus soluciones de IA para crecer con su negocio, adaptándose a sus necesidades específicas."
-        },
-        {
-          "icon": "icon-05",
-          "title": "IA en sus herramientas preferidas",
-          "content": "Aproveche las integraciones sin problemas con sus herramientas actuales, mejorando su ecosistema digital sin fricciones."
+            "icon":"icon-01",
+            "title":"Smartbot for customer service",
+            "content":"Create and train conversational chatbots for your website, WhatsApp, and other platforms, ensuring seamless customer interactions."
+         },
+         {
+            "icon":"icon-02",
+            "title":"AI integration in your systems",
+            "content":"Optimize your ERP and digital products with advanced system agents that automate critical tasks and improve efficiency."
+         },
+         {
+            "icon":"icon-03",
+            "title":"Security and regulation",
+            "content":"Integrate AI into every aspect of your organization securely and in compliance with the strictest regulations."
+         },
+         {
+            "icon":"icon-04",
+            "title":"Guaranteed adaptation",
+            "content":"Customize and scale your AI solutions to grow with your business, adapting to your specific needs."
+         },
+         {
+            "icon":"icon-05",
+            "title":"AI in your favorite tools",
+            "content":"Take advantage of seamless integrations with your current tools, enhancing your digital ecosystem without friction."
         }
       ]
     },
-    "idea": {
-      "heading": "Lo ayudamos a llevar a cabo sus ideas, <span class='heading-degrade'>de principio a fin.</span>",
-      "content": "Conocemos los desafíos que se presentan al querer transformar una idea en un producto que pueda insertarse en el mercado. Nuestra misión es acompañarte durante todo el proceso y hacerlo posible.",
-      "icon": "timeline_en",
-      "buttonText": "Contáctenos"
-    },
-    "serenity_star": {
-      "heading": "Conozca <span>Serenity Star</span>, la tecnología que lo hace posible.",
-      "content": "Serenity Star acelera la adopción de la IA con soluciones integradas, altamente adaptables y centradas en la gobernanza, lo que garantiza una implementación rápida y compatible, manteniendo operaciones rentables adaptadas a las necesidades generalizadas y cambiantes de las organizaciones.​",
-      "buttonText": "Quiero saber más"
+   "idea":{
+      "heading":"We help you bring your ideas to life, </br><span class='gradient-text'>from start to finish.</span>",
+      "content":"We know the challenges that arise when trying to turn an idea into a product that can enter the market. Our mission is to support you throughout the entire process and make it possible.",
+      "icon":"timeline_en",
+      "buttonText":"Contact us"
+   },
+   "serenity_star":{
+      "heading":"Discover <span>Serenity Star</span>,</br> the technology that makes it possible.",
+      "content":"Serenity Star accelerates AI adoption with integrated, highly adaptable, and governance-focused solutions, ensuring fast and compliant implementation while maintaining profitable operations tailored to the widespread and changing needs of organizations.​",
+      "buttonText":"I want to know more"
     }
   }
